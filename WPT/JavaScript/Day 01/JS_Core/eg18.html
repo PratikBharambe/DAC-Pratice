@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adder</title>
+</head>
+
+<body>
+    <label for="first">First Number : </label>
+    <input type="text" name="first" id="first" placeholder="First Number">
+    <br>
+    <label for="second">Second Number : </label>
+    <input type="text" name="second" id="second" placeholder="Second Number">
+    <br>
+    <button onclick="addition()">Add</button>
+    <output id="disp"></output>
+
+    <script>
+        let fir, sec, sum;
+         function addition() {
+            fir = +first.value;
+            sec = +second.value;
+
+            sum = fir + sec;
+
+            disp.value = "Sum is : " + sum;
+         }
+    </script>
+</body>
+
+</html>

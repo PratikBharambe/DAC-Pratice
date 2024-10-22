@@ -1,0 +1,14 @@
+package day_02;
+
+public class TestAssignment2dArray {
+
+	public static void main(String[] args) {
+		int choice;
+		do {
+			choice = Assignment2dArrayService.getMeun();
+			
+		} while (choice != 5);
+
+	}
+
+}

@@ -1,0 +1,7 @@
+{
+    "name" : "Name Value",
+    "institute" : "institute",
+    "Boolean" : true,
+    "Array" : ["data01", 1, true, "sept 27 2024"],
+    "Integer" : 10213
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Demo on document method</h3>
+    <h1 id="heading">Hello World</h1>
+    <input type="radio" name="name" id="r1"> <label for="r1">Red</label> &nbsp;
+    <input type="radio" name="name" id="r2"> <label for="r2">Green</label> &nbsp;
+    <input type="radio" name="name" id="r3"> <label for="r3">Blue</label> &nbsp;
+
+    <script>
+
+
+        document.getElementById('r1')
+
+        let heading = document.getElementById("heading")
+        document.write(`<br> h1 : ${heading} <br>`)
+        
+        let radios = document.getElementsByName('name')
+        document.write(`Radio : ${radios} <br>`)
+    </script>
+
+</body>
+</html>

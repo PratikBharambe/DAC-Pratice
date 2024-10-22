@@ -1,0 +1,31 @@
+<!-- example on JS -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Js16</title>
+</head>
+
+<body>
+    <h3>demo on parsing</h3>
+    <script>
+        let x = "15", y = "7", res;
+
+        res = x * y;
+        document.write(res + '<br>');
+        document.write(x - y + '<br>');
+        document.write(x / y + '<br>');
+        document.write(--x + "<br>");
+
+        res = window.parseInt(x) + window.parseInt(y);
+        document.write(res + "<br>");
+        document.write(+x + +y, '<br>');
+
+        let str = "ram";
+        document.write(parseInt(str) + '<br>');
+        document.write(+str + '<br>');
+        document.write(str * 10);	  
+    </script>
+</body>
+
+</html>

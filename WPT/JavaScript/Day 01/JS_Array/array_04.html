@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <h3>Demo on nesting array</h3>
+    <script>
+
+        const arr = [
+            [10, 20, 30],
+            [22, 33, 44]
+        ];
+        document.write(`a   ${arr}`)
+        document.write(`Length is ${arr.length}<br>`)
+        document.write(`arr[0]     ${arr[0].length}<br>`)
+        document.write(`arr[1]     ${arr[1].length}<br>`)
+
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++)
+                document.write(`${arr[i][j]} &nbsp;`)
+            document.write(`<br>`)
+        }
+
+    </script>
+</body>
+
+</html>

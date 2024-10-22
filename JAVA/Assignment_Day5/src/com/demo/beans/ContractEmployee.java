@@ -1,0 +1,51 @@
+package com.demo.beans;
+
+import java.time.LocalDate;
+
+public class ContractEmployee extends Employee {
+	private float hrs;
+	private float hrsCharge;
+	
+	private static int count;
+	
+	static {
+		count = 1;
+	}
+
+	public ContractEmployee() {
+		super();
+		count++;
+	}
+
+	public ContractEmployee(String pName, String mob, String email, String dept, String designation, LocalDate doj, float hrs, float hrsCharge) {
+		super(generateContractEmpId(), pName, mob, email, dept, designation, doj);
+		this.hrs = hrs;
+		this.hrsCharge = hrsCharge;
+		count++;
+	}
+	
+	private static String generateContractEmpId() {
+		return "CE" + count;
+	}
+
+	public float getHrs() {
+		return hrs;
+	}
+
+	public void setHrs(float hrs) {
+		this.hrs = hrs;
+	}
+
+	public float getHrsCharge() {
+		return hrsCharge;
+	}
+
+	public void setHrsCharge(float hrsCharge) {
+		this.hrsCharge = hrsCharge;
+	}
+
+	@Override
+	public String toString() {
+		return super.toString() + " ContractEmployee [hrs=" + hrs + ", hrsCharge=" + hrsCharge + "] ";
+	}
+}

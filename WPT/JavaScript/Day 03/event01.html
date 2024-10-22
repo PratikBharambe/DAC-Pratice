@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler</title>
+    <style>
+        #div1 {
+            width: 300px;
+            background-color: #504e4c;
+            padding: 15px;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>hiding / display elements</h1>
+
+    <fieldset style="width: 600px;">
+        <legend>Marital Status</legend>
+        <input type="radio" name="radio" id="ms1" value="Single"><label for="ms1">Single</label> &nbsp;&nbsp;
+        <input type="radio" name="radio" id="ms2" value="Married"><label for="ms2">Married</label> &nbsp;&nbsp;
+        <input type="radio" name="radio" id="ms3" value="Widowed"><label for="ms3">Widowed</label> &nbsp;&nbsp;
+        <input type="radio" name="radio" id="ms4" value="Divorced"><label for="ms4">Divorced</label> &nbsp;&nbsp;
+        <input type="radio" name="radio" id="ms5" value="Never Marrying"><label for="ms5">Never Marrying</label>
+        &nbsp;&nbsp;
+
+    </fieldset>
+
+    <div id="div1">
+        <label for="date">Barbadi ka din : </label><input type="date" name="date" id="date"><br>
+        <label for="name">Partner's Name : </label><input type="text" id="name" name="name">
+    </div>
+
+    <script>
+        let divtag = document.getElementById('div1').style;
+
+    
+        document.getElementById('ms2').onclick = () => {
+            divtag.visibility = 'visible';
+        };
+
+        
+        document.getElementById('ms1').onclick = () => {
+            divtag.visibility = 'hidden';
+        };
+        document.getElementById('ms3').onclick = () => {
+            divtag.visibility = 'hidden';
+        };
+        document.getElementById('ms4').onclick = () => {
+            divtag.visibility = 'hidden';
+        };
+        document.getElementById('ms5').onclick = () => {
+            divtag.visibility = 'hidden';
+        };
+    </script>
+
+</body>
+
+</html>

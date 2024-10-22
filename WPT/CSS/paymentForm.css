@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  margin: 15px 30px 15px 30px;
+  padding: 10px;
+  background: url("./img/background.jpg") no-repeat;
+  background-size: cover;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px 20px 15px 20px;
+  box-shadow: 0px 0px 30px white;
+  border-radius: 20px;
+  width: 65%;
+  margin: auto;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="password"],
+select,
+textarea {
+  /* color: black; */
+  width: 100%;
+  padding: 12px;
+  margin: 5px;
+  border: 1px white dashed;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+label{
+    margin: 5px;
+    padding: 5px;
+}
+
+fieldset {
+  border: 1px white dashed;
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+}
+
+.main-heading{
+    text-align: center;
+}
+
+input[type = "submit"]{
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid white;
+    border-radius: 10pc;
+    box-shadow: 0px 0px 30px white;
+    font-size: 20px;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    cursor: pointer;
+}
+
+input[type = "submit"]:hover{
+    background-color: rgba(113, 107, 107, 0.926);
+}
+option{
+    color: black;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Card</title>
+    <style>
+        body{
+            background: url(../img/background.jpg) no-repeat;
+            background-size: cover;
+            color: white;
+        }
+        table{
+            text-align: left;
+            font-size: 15px;
+            padding: 8px;
+            width: 450px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        input{
+            text-align: left;
+            margin: 5px;
+            font-size: 15px;
+            padding: 8px;
+            background: rgba(0, 0, 0, 0.5);
+            border: white 2px solid;
+            border-radius: 10px;
+            color: white;
+        }
+        form{
+            background: rgba(15, 15, 15, 0.8);
+            border-radius: 30px;
+            padding: 20px;
+            width: 450px;
+            margin: auto;
+            border: white 2px dashed;
+        }
+
+        #submit{
+            height: 40px;
+            width: 250px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 5px 5px 20px;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center; text-shadow: 5px 5px 20px;">Report Card Generator</h1>
+    <form action="" method="post">
+        <table>
+            <tr>
+                <th><label for="name">Enter name : </label></th>
+                <td><input type="text" id="name" name="name" placeholder="Enter name"></td>
+            </tr>
+            <tr>
+                <th><label for="roll">Enter roll no. : </label></th>
+                <td><input type="text" id="roll" name="roll" placeholder="Enter Roll No."></td>
+            </tr>
+            <tr>
+                <th colspan="2"><label for="marks">Enter Marks : </label></th>
+            </tr>
+            <tr>
+                <th><label for="htmlMarks">Enter HTML Marks : </label></th>
+                <td><input type="text" id="htmlMarks" placeholder="Html Marks"></td>
+            </tr>
+            <tr>
+                <th><label for="cssMarks">Enter CSS Marks : </label></th>
+                <td><input type="text" id="cssMarks" placeholder="Css Marks"></td>
+            </tr>
+            <tr>
+                <th><label for="jsMarks">Enter JavaScript Marks : </label></th>
+                <td><input type="text" id="jsMarks" placeholder="JavaScript Marks"></td>
+            </tr>
+        </table>
+
+        <input type="submit" id="submit" name="submit" value="Generate Report Card">
+    </form>
+</body>
+
+</html>

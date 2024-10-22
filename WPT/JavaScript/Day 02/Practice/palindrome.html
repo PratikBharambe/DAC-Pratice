@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Prograsm to check palindrome number</h1>
+
+    <input type="text" id="number" name="number" placeholder="Enter a number">
+    <input type="submit" onclick="palindrome()" value="Check Palindrome">
+    <output id="msg"></output>
+    
+
+    <script>
+        function palindrome(){
+            let num = number.value;
+            let checNum = num;
+
+            let rev = 0;
+
+            while(num > 0){
+                let lastDigit = num % 10;
+                rev = (rev * 10) + lastDigit;
+                console.log(lastDigit)
+                num = Math.floor(num / 10);
+            }
+
+            if(rev == checNum){
+                msg.value = "Palindrome"
+            } else{
+                msg.value = "not paalindrome-"
+            }
+        }
+    </script>
+</body>
+</html>

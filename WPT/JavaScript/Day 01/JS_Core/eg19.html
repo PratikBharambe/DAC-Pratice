@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="first">First Number : </label>
+    <input type="text" name="first" id="first" placeholder="First Number">
+    <br>
+    <label for="second">Second Number : </label>
+    <input type="text" name="second" id="second" placeholder="Second Number">
+    <br>
+    <button onclick="disp.value = +first.value + +second.value">+</button>
+    <button onclick="disp.value = +first.value - +second.value">-</button>
+    <button onclick="disp.value = +first.value * +second.value">*</button>
+    <button onclick="disp.value = +first.value / +second.value">/</button>
+    <button onclick="disp.value = +first.value % +second.value">%</button>
+    <button onclick="disp.value = first.value ** second.value">^</button>
+    <br>
+    <output id="disp"></output>
+</body>
+</html>

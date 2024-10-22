@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>DOM</title>
+</head>
+
+<body>
+	<h2>demo on dom events</h2>
+	<div id="div1">
+		Editplus Is Sold "As Is" And Without Any Warranty As To Merchantability Or Fitness For A Particular Purpose Or
+		Any Other Warranties Either Expressed Or Implied. The Author Will Not Be Liable For Data Loss, Damages, Loss Of
+		Profits Or Any Other Kind Of Loss While Using Or Misusing This Software.
+	</div>
+	<button onclick="document.querySelector('#div1').style.textAlign='left' ">Left</button>
+	<button onclick="document.querySelector('#div1').style.textAlign='right'">Right</button>
+	<button onclick="document.querySelector('#div1').style.textAlign='center'">Center</button>
+	<button onclick="document.querySelector('#div1').style.textAlign='justify'">Justify</button>
+
+	<button id="b">B</button>
+	<button id="i">I</button>
+	<button id="u">U</button>
+	<input type="color" id="c">
+	<script>
+		const div = document.querySelector("#div1").style;
+		document.querySelector("#b").onclick = function () {
+			div.fontWeight = 'bold';
+		}
+
+		document.querySelector("#i").onclick = () => div.fontStyle = "italic";
+
+		document.querySelector("#u").onclick = () => div.textDecoration = 'underline';
+
+		document.querySelector("#c").onchange = () => div.color = c.value;
+	</script>
+</body>
+
+</html>

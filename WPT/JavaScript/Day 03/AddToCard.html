@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Assignment on Add To Cart</h1>
+    <input type="button" value="Add to Cart" onclick="updateCart()">
+    <div id="cart"></div>
+    <script>
+
+        function updateCart() {
+            let image = document.createElement("img");
+            image.setAttribute("src", "./img/samsung.jfif")
+            image.style.width = "300px"
+            image.style.height = "300px"
+            let head3 = document.createElement("h3");
+            head3.innerHTML = "Samsung S26 8GB 512GB";
+            let disc = document.createElement("p");
+            disc.innerHTML = "Sanpdragon 333";
+
+            let container = document.createElement("div");
+            container.setAttribute("id", "cartItem");
+            container.style.display = "inline-block"
+            container.style.width = "300px";
+
+            container.appendChild(image);
+            container.appendChild(head3);
+            container.appendChild(disc);
+
+            container.setAttribute("border", "2 solid")
+            container.style.boxShadow = "0px 0px 20px black"
+            container.style.margin = "10px";
+            container.style.padding = "10px";
+
+            let removeButton = document.createElement("input");
+            container.appendChild(removeButton)
+            removeButton.setAttribute("type", "submit")
+            removeButton.setAttribute("value", "Remove")
+            removeButton.addEventListener("click", () => {
+                document.getElementById("cartItem").remove(container);
+            })
+
+            document.getElementById("cart").appendChild(container);
+        }
+    </script>
+</body>
+
+</html>

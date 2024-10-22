@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <script>
+
+        const a = [10, 20, 30, 40, 50, 60, 70, 80, 30, 90]
+        document.write(`${a}<br>`)
+
+
+        document.write(`30 Found ${a.includes(30)}<br>`)
+        document.write(`10 Found ${a.includes(10)}<br>`)
+
+        let str = "green apples";
+        document.write(`${str.includes("app")}<br>`);
+        document.write(`${str.includes("in")}<br>`);
+
+        document.write(`${[11, 22, 33].includes(22)}<br>`);
+        document.write(`${"mangos".includes("go")}<br>`);
+
+        //Index OF
+        document.write(`${a.indexOf(30)}<br>`)
+        document.write(`${a.indexOf(40)}<br>`)
+
+        //lastindexof
+        document.write(`last index of----------------${a.lastIndexOf(30)}<br>`)
+        document.write(`last index of----------------${str.lastIndexOf('o')}<br>`)
+
+        //reverse
+        a.reverse();
+        document.write(`Reverse------------${a}<br>`)
+
+        //sort
+        a.sort();
+        document.write(`Sorted-------------${a},<br>`)
+
+        
+	  const names=['ramarao','raman','rama','Ramakrishna','Ramana','ramarama','ramaraj'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ];
+	  
+	  document.write(`${names}<br>`);
+	  names.sort();
+	  document.write(`sorted--------------------${names}<br>`);	  
+	  
+	  //join
+	  document.write(`${a.join('&#9977;')}<br>`);  
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report card</title>
+</head>
+
+<body>
+    <h3>Report card</h3>
+    <table>
+        <tr>
+            <td>
+                <label for="name">Name : </label>
+            </td>
+            <td>
+                <input type="text" placeholder="Enter name : " id="name" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="roll">Roll No. : </label>
+            </td>
+            <td>
+                <input type="text" placeholder="Enter Roll No. : " id="roll" maxlength="3" required>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">Marks</td>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td><input type="text" id="html"></td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td><input type="text" id="css"></td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td><input type="text" id="js"></td>
+        </tr>
+        <tr>
+            <td>BootStrap</td>
+            <td><input type="text" id="bt"></td>
+        </tr>
+    </table>
+
+    <button onclick="test()">Generate Grades</button>
+
+    <output id="nameop"></output>
+    <output id="rollop"></output>
+    <output id="avgop"></output>
+
+    <script>
+        let hm, cm, jm, bm, n, r;
+        function test() {
+            hm = +html.value;
+            cm = +css.value;
+            jm = +js.value;
+            bm = +bt.value;
+            n = name.value;
+            r = roll.value;
+
+            sum = hm + cm + jm + bm;
+            let avg = sum / 4;
+
+            nameop.value = "Name is : " + n;
+            rollop.value = "Roll No. is : " + r;
+            avgop.value = "Average is : " + avg;
+        }
+    </script>
+
+</body>
+
+</html>

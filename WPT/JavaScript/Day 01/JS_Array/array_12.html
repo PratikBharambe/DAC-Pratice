@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Arrays</title>
+</head>
+
+<body>
+    <h3>demo on array methods</h3>
+    <input type="text" id="tb" placeholder="enter any number"> <br>
+    <button onclick="addElement()"> add element </button>
+    <button onclick="viewElements()"> display a</button>
+    <bR> <br>
+    <span>Elements:</span> <Br>
+    <output id="op"></output>
+
+    <script>
+        const a = [];
+
+        function addElement() {
+            if (tb.value.trim() !== "") {
+                a.push(tb.value);
+            }
+            tb.value = "";
+            tb.focus();
+        }
+
+        function viewElements() {
+            op.value = a;
+        } 
+    </script>
+</body>
+
+</html>

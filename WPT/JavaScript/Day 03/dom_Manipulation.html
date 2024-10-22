@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>demo on document properties</h3>
+    <script>
+        document.write(`${document.title}<br>`);
+        document.title = 'title changed';
+
+        document.write(`${document.URL}<br>`);
+
+        const h = document.head;		//it returns head tag object
+        document.write(`${h}<br>`);
+
+        document.write(`${document.body}<br>`); //it returns body tag object
+
+        const img = document.images;		//it returns img tag objects
+        document.write(`${img}<br>`);
+
+        const link = document.links;		//it returns a tag objects
+        document.write(`${link}<br>`);
+
+        const form = document.forms;		//it returns form tag objects
+        document.write(`${form}<br>`);		 
+    </script>
+
+
+    <!-- 
+    <input type="text" placeholder="Enter the 1st number" id="num1">
+    <input type="text" placeholder="Enter the 2nd number" id="num2">
+    <input type="button" value="sum" onclick="sum()">
+    <h3 id="result"></h3>
+    <script>
+
+        function sum() {
+            const a = parseInt(document.getElementById("num1").value)
+            const b = parseInt(document.getElementById("num2").value)
+            let res = a + b;
+            document.getElementById("result").innerHTML = "sum is " +res;
+        }
+    </script> -->
+
+    <!-- <input type="text" placeholder="Enter the name" id="name">
+    <input type="button" value="get name" onclick="getInput()">
+    <script>
+
+        function getInput()
+        {
+            const nameField=document.getElementById("name");
+
+            const name=nameField.value
+            alert("Hello"+name)
+        }
+
+</script> -->
+
+
+
+
+
+
+
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                          Buble wali assignment                          -->
+    <!-- ----------------------------------------------------------------------- -->
+
+    <!-- <div class="container">
+        <img src="./img/offbulb.png" id="Image" height="400px" width="300px">
+    </div>
+    <input type="button" id="btn" onclick="glowDullBuld()" value="Turn On">
+    <script>
+        function glowDullBuld() {
+            let image = document.getElementById('Image');
+            if (image.src.match("offbulb"))
+                image.src =
+                    "./img/onbulb.png";
+            else
+                image.src =
+                    "./img/offbulb.png";
+        }
+    </script> -->
+
+
+
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                       remove an existing element                        -->
+    <!-- ----------------------------------------------------------------------- -->
+
+    <!--     
+    <div id="container">
+        <input type="text" placeholder="enter phno" id="phoneid">
+    </div>
+    <input type="button" value="-" onclick="removeField()">
+     --------------------------- first approach ---------------------------- -->
+    <!-- <script>
+        function removeField() {
+            let field = document.getElementById("phoneid");
+            field.remove();
+        }
+    </script> -->
+    <!-- --------------------------- second approach --------------------------- -->
+    <!-- <script>
+        function removeField() {
+            let field = document.getElementById("container");
+            field.remove(phoneid);
+        }
+    </script> -->
+
+
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                       Ways to change the content                        -->
+    <!-- ----------------------------------------------------------------------- -->
+
+
+    <!-- ------------ Assigment to restrict no of input fields .... ------------ -->
+
+    <!-- <input type="text" placeholder="Enter Phone number">
+    <input type="button" value=" + " onclick="genertaeFunction()">
+    <div id="ne"></div>
+    <script>
+        let max = 3;
+        let count = 1;
+        function genertaeFunction() {
+            let newEle = document.createElement("input");
+            newEle.setAttribute('type', 'text')
+            newEle.setAttribute("placeholder", "Enter number")
+            count++;
+            if (count <= max) {
+                document.getElementById("ne").appendChild(newEle);
+            }else{
+                alert("Maximum range has beeen covered...............");
+            }
+        }
+    </script> -->
+
+
+
+    <!-- <h1 id="myh1">Welcome <span>to the wprld</span></h1>
+    <input type="button" value="get content" onclick="getContent()">
+    <script>
+        function getContent() {
+            let ref = document.getElementById("myh1");
+            // to update heading ...............
+            ref.innerHTML = 'Updated Heading ............'
+        }
+    </script> -->
+
+
+
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                          getting text using js                          -->
+    <!-- ----------------------------------------------------------------------- -->
+
+
+    <!-- <h1 id="myh1">welcome<span> to world</span></h1>
+    <input type="button" value="get content" onclick="getContent()">
+    <script>
+
+        function getContent() {
+            var refvar = document.getElementById("myh1");
+            // console.log(refvar);
+            console.log(refvar.innerHTML);
+            console.log(refvar.innerText);
+        }
+    </script> -->
+
+
+
+
+
+
+    <!-- <h1 id="myh1">Welcome</h1>
+    <input type="button" value="get content" onclick="getContent()">
+    <script>
+        function getContent() {
+            var ref = document.getElementById("myh1");
+            document.write(ref);
+            document.write(ref.innerHTML);
+            document.write(ref.innerText);
+        }
+    </script> -->
+</body>
+
+</html>

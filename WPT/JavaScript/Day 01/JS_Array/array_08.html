@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo of push and pop elements</title>
+</head>
+
+<body>
+    <script>
+        const a = []
+
+        a.push(10)
+        a.push(20)
+        a.push(30)
+        document.write(`${a}`)
+
+        let c = a.push(40);
+        document.write(`a	${a}<br>`);
+        document.write(`${c}<br>`);
+        let x = a.pop();
+        document.write(`1st pop ${x}<br>`);
+        document.write(`2nd pop ${a.pop()}<br>`);
+        document.write(`a	${a}<br>`);
+        a.push(11, 22, 33);
+        document.write(`a	${a}<br>`);
+    </script>
+</body>
+
+</html>

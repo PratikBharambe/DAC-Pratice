@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>DOM</title>
+ </head>
+ <body>
+	<h3>demo on element properties (changing styles)</h3>
+	<div align="center">
+		<h1>Siva Khanna</h1>
+		<input type="radio" id="c1" name="color"> <label>Red</label> &nbsp; &nbsp; 
+		<input type="radio" id="c2" name="color"> <label>Green</label> &nbsp; &nbsp; 
+		<input type="radio" id="c3" name="color"> <label>Blue</label>
+	</div>
+	<script>
+		const h1 = document.querySelector("h1");
+	
+		document.querySelector("#c1").onchange=function() { h1.style.color="red"; }
+		document.querySelector("#c2").onchange=function() { h1.style.color="green"; }
+		document.querySelector("#c3").onchange=function() { h1.style.color="blue"; }	
+	</script>
+	<hr>
+	<label>Selector Background color</label> <br>
+	<input type="color" id="c">
+	<script>
+		
+		document.getElementById("c").onchange=function() {
+						document.body.style.background=c.value;
+					}
+	</script>
+		
+ </body>
+</html>

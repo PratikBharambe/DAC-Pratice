@@ -1,0 +1,17 @@
+package com.demo.service;
+
+import com.demo.beans.Student;
+
+public interface StudentService {
+
+	void displayAll();
+
+	void addStudent();
+
+	Student findById(int id);
+
+	Student[] findByName(String name);
+
+	float calculateGpa(int id);
+
+}

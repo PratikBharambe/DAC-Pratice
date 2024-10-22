@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="p"></p>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <script>
+        let myjson = `{
+            "name":"raj",
+            "mobile":98876578,
+            "course":["c","c++","java"],
+            "address":{"area":"baner"}
+        }`;
+
+        let d = JSON.parse(myjson)
+        document.getElementById("p").innerText = d.name;
+        document.getElementById("p1").innerText = d.mobile;
+        for (data in d.course)
+            document.getElementById("p2").innerText += d.course[data];
+
+
+    </script>
+</body>
+
+</html>

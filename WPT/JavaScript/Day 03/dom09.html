@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">   
+ <head>
+  <meta charset="UTF-8">
+  <title>DOM</title>
+ </head>
+ <body>
+	<h3>demo on dom event handling </h3>
+	<button id="bt1"> Push </button> &nbsp; &nbsp; 
+	<button id="bt2"> Pull </button>
+	<br>
+	<script>
+	
+		const bt1 = document.querySelector("#bt1");
+		bt1.addEventListener("click", function(){ alert("hey, you pushed me") } );
+	
+		document.querySelector("#bt1").addEventListener("click", function(){ alert("hey, you pushed me") } );
+
+	
+		const bt2 = document.querySelector("#bt2");
+		bt2.onclick=function(){	alert("hey, you pulled me") }
+		
+		document.querySelector("#bt2").onclick=function(){	alert("hey, you pulled me") }
+	</script>
+ </body>
+</html>

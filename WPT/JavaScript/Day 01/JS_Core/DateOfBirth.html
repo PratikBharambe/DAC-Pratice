@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Of Birth</title>
+    <style>
+        select{
+            width: 150px;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Date Of Birth</h1>
+    <div class="container">
+        <select name="date" id="date">
+            <option>Select Date</option>
+            <script>
+                for (let i = 1; i <= 31; i++) {
+                    document.write(`<option> ` + i + ` </option>`)
+                }
+            </script>
+        </select>
+        <select name="month" id="month">
+            <option>Select Month</option>
+            <script>
+                for (let i = 1; i <= 12; i++) {
+                    document.write(`<option> ` + i + ` </option>`)
+                }
+            </script>
+        </select>
+        <select name="year" id="year">
+            <option>Select Year</option>
+            <script>
+                for (let i = 2024; i >= 1970; i--) {
+                    document.write(`<option> ` + i + ` </option>`)
+                }
+            </script>
+        </select>
+    </div>
+</body>
+
+</html>

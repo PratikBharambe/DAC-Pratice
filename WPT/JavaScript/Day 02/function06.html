@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Function</title>
+</head>
+
+<body>
+    <h2> Demo on shadowing </h2>
+    <script>
+        var n = 100;
+        function display() {
+            let n = 200;
+            document.write("N: " + n + "<br>");
+            document.write(n * 12, "<br>");
+            document.write(n / 10 + "<br>");
+            document.write(this.n + "<br>");
+        }
+        display();
+        document.write("N ==> " + n + "<br>"); 
+    </script>
+</body>
+
+</html>

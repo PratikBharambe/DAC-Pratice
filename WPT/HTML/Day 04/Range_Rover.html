@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Range Rover</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: whitesmoke;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: cursive;
+    }
+
+    .landing {
+      background: url("./range_rover2.jpg") no-repeat fixed center;
+      background-size: cover;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+      height: 70px;
+      width: 70px;
+    }
+
+    .nav-item {
+      display: flex;
+      gap: 20px;
+      /* Space between links */
+    }
+
+    .nav-item a {
+      text-decoration: none;
+      color: whitesmoke;
+      font-size: 18px;
+      transition: color 0.3s;
+      /* Smooth color transition */
+    }
+
+    .nav-item a:hover {
+      color: #00ff15;
+      /* Change color on hover */
+    }
+
+    .name {
+      font-family: "informal roman";
+      font-size: 70px;
+      font-style: italic;
+      font-weight: 600;
+      margin: 10px 0px 0px 30px;
+      text-align: center;
+      text-shadow: 0px 0px 50px black;
+    }
+
+    .page {
+      background: url("./back.webp") fixed repeat center;
+      background-size: cover;
+      width: 100%;
+      height: 120vh;
+    }
+
+    .page1 {
+      background: url("./background.jpg") fixed repeat center;
+      background-size: cover;
+      width: 100%;
+      height: 100vh;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .row img {
+      height: 300px;
+      width: 400px;
+      margin: 10px;
+      padding: 10px;
+      border: 2px solid white;
+      border-radius: 30px;
+    }
+
+    td {
+      padding: 10px;
+    }
+
+    .aboutUs {
+      text-align: center;
+      margin: 10px;
+      padding: 10px;
+    }
+
+    .aboutimg img {
+      height: 400px;
+      width: 400px;
+      padding: 10px;
+      margin: 15px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="landing">
+    <div class="navbar">
+      <img class="logo" src="./logo.webp" alt="Logo" />
+      <div class="nav-item">
+        <a href="#home">Home</a>
+        <a href="#aboutUs">About Us</a>
+        <a href="#products">Products</a>
+        <a href="#services">Services</a>
+        <a href="#contactUs">Contact Us</a>
+      </div>
+    </div>
+    <div class="name">Range Rover</div>
+  </div>
+  <div class="page" id="home">
+    <h1>Home</h1>
+    <div class="row">
+      <table>
+        <tr>
+          <td><img src="./range_rover3.jpg" alt="" srcset=""></td>
+          <td> The Most Desirable SUV Range Rover Now Also Proudly Built In India, For India. Breathtaking modernity –
+            the most desirable Range Rover ever created. Sliding panoramic roof. Rear Seat Entertainment. Meridian™
+            Sound System. Cabin Air Purification.
+          </td>
+        </tr>
+        <tr>
+          <td>The Range Rover is a luxury SUV manufactured by Land Rover, first introduced in 1970. Known for its
+            powerful engines and exceptional off-road capabilities, it combines rugged performance with sophisticated
+            design. Inside, the Range Rover offers a lavish interior with high-quality materials, spacious seating, and
+            cutting-edge technology for comfort and convenience.</td>
+          <td><img src="./reamgeRover4.jpg" alt=""></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="page1" id="aboutUs">
+    <h1>About us</h1>
+    <div class="aboutUs">At Range Rover, we are passionate about luxury, performance, and adventure. With a legacy that
+      began in 1970, we have consistently redefined the SUV experience by blending cutting-edge technology with elegant
+      design. Our vehicles are crafted for those who seek both sophistication and capability, making every journey
+      extraordinary, whether on the road or off the beaten path.</div>
+    <div class="aboutimg">
+      <img src="./landrover.jfif" alt="">
+      <img src="./landrover1.jfif" alt="">
+    </div>
+  </div>
+  <div class="page" id="products">
+    <h1>Products</h1>
+  </div>
+  <div class="page1" id="services">
+    <h1>Services</h1>
+  </div>
+  <div class="page" id="contactUs">
+    <h1>Contact Us</h1>
+  </div>
+</body>
+
+</html>

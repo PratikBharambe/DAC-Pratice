@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Demo on element properties</h1>
+    <h1 id="head1">Apple</h1>
+    <input type="text" id="tb1" name="tb1" value="1000">
+
+    <script>
+        let head1 = document.getElementById("head1")
+        document.write(`<br> ${head1.innerHTML}`)
+
+        head1.innerHTML = 'Pratik'
+        head1.innerHTML += ' Bharambe'
+
+        let tb1 = document.getElementById("tb1")
+        document.write(`<br> ${tb1.value}`)
+        
+        let value = +tb1.value
+        document.write(`<br> ${value+3}`)
+
+    </script>
+
+</body>
+
+</html>

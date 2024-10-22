@@ -1,0 +1,48 @@
+package com.demo.test;
+
+import java.util.Scanner;
+
+import com.demo.service.StudentService;
+import com.demo.service.StudentServiceImpl;
+
+public class TestStudent {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int choice = 0;
+		
+		do {
+			System.out.println("1. Add new Student.");
+			System.out.println("2. Display All.");
+			System.out.println("3. Exit.");
+			System.out.println("Enter your choice : ");
+			choice = sc.nextInt();
+			
+			StudentService ss = new StudentServiceImpl();
+			
+			switch (choice) {
+			case 1:
+				ss.addStudent();
+				break;
+				
+			case 2:
+				ss.displayAll();
+				break;
+				
+			case 3:
+				System.out.println("Thanks for visiting .............");
+				sc.close();
+				break;
+				
+			default:
+				System.out.println("Invalid choice !!!");
+				break;
+			}
+			
+			
+		} while (choice != 3);
+		
+	}
+
+}

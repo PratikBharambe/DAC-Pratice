@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>demo on removing & adding elements</h3>
+    <div id="div1">
+        <h1>red apple</h1>
+        <span>yellow mango</span>
+        <p>black grape</p>
+        <button onclick="document.querySelector('h1').remove()">remove element</button>
+        <br>
+    </div>
+    <hr>
+    <div id="div2">
+        <button id="bt2"> add to cart </button>
+    </div>
+    <hr>
+    <script>
+        document.querySelector("#bt2").onclick = function () {
+            
+            const pi = document.createElement("img"); 
+            pi.src = "ref.jpg";	
+            pi.style.width = "150px";
+            pi.style.height = "220px";
+
+            
+            const pn = document.createElement("h3"); 
+            pn.innerText = "Samsung 653L, 3 Star, Frost Free, Double Door";
+
+
+            const price = document.createElement("div");
+            price.innerHTML = "Limited Time Deal <strong>&#8377;79990</strong><br>M.R.P.: <del>&#8377;113000</del>";
+
+        
+            const delbt = document.createElement("button");
+            delbt.innerText = "delete item";
+            delbt.onclick = () => document.querySelector("#product").remove();
+
+            
+            const container = document.createElement("div");
+            container.id = "product";
+        
+            container.appendChild(pi);
+            container.appendChild(pn);
+            container.appendChild(price);
+            container.appendChild(delbt);
+            container.style.width = "260px";
+            container.style.padding = "10px";
+            container.style.boxShadow = "0px 0px 10px black";
+            container.style.borderRadius = "15px";
+            container.style.textAlign = "left";
+            container.style.display = "inline-block";
+            container.style.margin = "10px";
+    
+            document.body.appendChild(container);
+        }
+
+    </script>
+</body>
+
+</html>

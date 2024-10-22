@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions In JS</title>
+</head>
+
+<body>
+    <h1>Demonstration on functions</h1>
+
+
+    <script>
+
+        // =========================================================================
+        /*
+        const arr = [1, 2, 3, 4];
+        var evenArray = arr.filter(
+            (item) => {
+                if (item % 2 == 0)
+                    return true;
+                else
+                    return false;
+            }
+        );
+
+        document.write(evenArray);
+        */
+
+        // =========================================================================
+        /*
+        const increment=(n)=>{
+            return n+5;
+        }
+        document.write(increment(2));
+        */
+
+        // =========================================================================
+        /*
+        const add = (a, b) => {
+            return a + b;
+        }
+        res = add(1, 2);
+        document.write(res);
+        */
+
+        // =========================================================================
+
+        // Arraw functions .................................
+        /*
+        const show = () => {
+            document.write("hello world");
+        }
+        show();
+        */
+
+
+        // =========================================================================
+
+        /*
+        // function to add two numbers ................
+        const add = function(a, b){
+            return a + b;
+        }
+
+        var rs = add(2, 3);
+        document.write(rs);
+        */
+
+        // =========================================================================
+        /*
+        var obj = function show(){
+            document.write("Hello World");
+            document.write(obj);
+        }
+
+        obj();
+        */
+
+        // =========================================================================
+
+        /*
+        function show(){
+            document.write("Hello World");
+        }
+
+        var obj = show;
+        document.write(obj);
+        obj();
+        show();
+        */
+
+        // =========================================================================
+        /*
+        function demo(args) {
+            document.write(args);
+            args(); // call back function ....................
+        }
+
+        demo(function () {
+            document.write("Hello World");
+        });
+        */
+
+
+        // =========================================================================
+
+        /*
+        function demo(args) {
+            document.write(args);
+            args(); // call back function ....................
+        }
+
+        demo(function show() {
+            document.write("Hello World");
+        });
+        */
+
+        // =========================================================================
+
+        // call back function ...........................
+        /*
+        function show(){
+            document.write("Hello World");
+        }
+
+        function display(arg){
+            document.write(arg + "<br>");
+            // Calling a function through parameter { Call Back Function }.................
+            arg();
+        }
+
+        display(show);
+        */
+
+        // =========================================================================
+
+        /*
+        function show(){
+            document.write("Hello World");
+        }
+
+        function display(arg){
+            document.write(arg);
+        }
+
+        display(show);
+        */
+
+        // =========================================================================
+
+        // name Function *****************************************
+
+        /*
+        // function defination ......................
+        function fun_name(para) {
+            // function body ...................
+        }
+
+        // function Calling .........................
+        fun_name();
+        */
+
+    </script>
+
+</body>
+
+</html>

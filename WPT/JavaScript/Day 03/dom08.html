@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Demo to changing setting of html</h3>
+    <img src="./img/onbulb.png">
+    <input type="text" id="una" size="20">
+
+    <br>
+    <script>
+
+        const img = document.querySelector("img");
+        document.write(`${img.src}<br>`);
+        img.title = "some random flower";
+
+        const una = document.querySelector("#una");
+        document.write(`${una.type}<br>`);
+        una.placeholder = "enter name";
+        una.setAttribute("size", 10);
+
+
+    </script>
+</body>
+
+</html>

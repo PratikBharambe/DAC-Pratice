@@ -1,0 +1,32 @@
+package day_03;
+
+import java.util.Scanner;
+
+public class StudentService {
+	
+	private static Student[] studentArr;
+	private static int count;
+	
+	static {
+		studentArr = new Student[10];
+		studentArr[0] = new Student(01, "Pratik Bharambe", 10, 20, 30);
+		studentArr[1] = new Student(02, "Divya Chaudhari", 40, 50, 60);
+		count = 2;
+	}
+
+	public static int printMenu() {
+		System.out.println("1. Enter new Student.");
+		System.out.println("2. Display All Students.");
+		System.out.println("3. Search by Id.");
+		System.out.println("4. Search by name.");
+		System.out.println("5. Delete by id.");
+		System.out.println("6. Update student name.");
+		System.out.println("7. Exit.");
+		System.out.println("Enter your choice : ");
+		Scanner sc = new Scanner(System.in);
+		return sc.nextInt();
+	}
+	
+	
+
+}

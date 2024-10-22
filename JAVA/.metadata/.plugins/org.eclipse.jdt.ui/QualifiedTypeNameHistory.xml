@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="io.github.bonigarcia.wdm.WebDriverManager"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.edge.EdgeDriver"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+    <fullyQualifiedTypeName name="javax.net.ssl.SSLEngine"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="day_03.Student"/>
+    <fullyQualifiedTypeName name="com.demo.beans.Employee"/>
+    <fullyQualifiedTypeName name="com.demo.service.SportsClubService"/>
+    <fullyQualifiedTypeName name="com.demo.beans.SalariedEmployee"/>
+    <fullyQualifiedTypeName name="com.demo.beans.Person"/>
+    <fullyQualifiedTypeName name="com.demo.beans.ContractEmployee"/>
+    <fullyQualifiedTypeName name="com.demo.beans.Vendor"/>
+    <fullyQualifiedTypeName name="com.demo.beans.Member"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+</qualifiedTypeNameHistroy>

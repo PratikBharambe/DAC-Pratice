@@ -1,0 +1,32 @@
+package day_02;
+
+import java.util.Scanner;
+
+public class TestAssignment2dArray {
+
+	public static void main(String[] args) {
+		
+		int choice;
+		Scanner sc = new Scanner(System.in);
+		
+		do {
+			choice = Assignment2dArrayService.getMeun();
+
+			switch (choice) {
+			case 1:
+				System.out.print("Enter the size for square matrix : ");
+				int length = sc.nextInt();
+				int firstMatrix[][] = new int[length][length];
+				int secondMatrix[][] = new int[length][length];
+				Assignment2dArrayService.accept2dArray(firstMatrix);
+				Assignment2dArrayService.accept2dArray(secondMatrix);
+				break;
+			default:
+				System.out.println("Invalid Choice !!!");
+				break;
+			}
+		} while (choice != 5);
+
+	}
+
+}

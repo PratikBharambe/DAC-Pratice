@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Bullet color</title>
+    <style>
+        ul{
+            list-style-type: square;
+        }
+        .one>li::marker{
+            color: red;
+        }
+        .two>li::marker{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <ul class="one">
+        <li>list Data 1</li>
+        <li id="id1">list Data 2</li>
+        <li>list Data 3</li>
+        <li>list Data 4</li>
+        <li>list Data 5</li>
+    </ul>
+    <ul class="two">
+        <li>list Data 1</li>
+        <li>list Data 2</li>
+        <li>list Data 3</li>
+        <li>list Data 4</li>
+        <li>list Data 5</li>
+    </ul>
+</body>
+</html>

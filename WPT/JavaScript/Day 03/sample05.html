@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+</body>
+<input type="text" placeholder="enter phno">
+<input type="button" value="+" onclick="generateField()">
+<div id="container">
+
+</div>
+
+<script>
+    function generateField() {
+        const input = document.createElement("input");
+        input.setAttribute("type", "text");
+        input.setAttribute("placeholder", "enter phone");
+        const containerdiv = document.getElementById("container");
+        containerdiv.appendChild(input);
+    }
+</script>
+
+</html>

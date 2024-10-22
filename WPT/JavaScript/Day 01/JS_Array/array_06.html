@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>spread operator</h1>
+    <script>
+        const a = [10, 20, 30, 40];
+
+        /*const b = a;*/ //not allowed ..........................
+
+        const b = [...a]
+
+        document.write(b + '<br>');
+
+        a[4] = 55;
+        b[4] = 66;
+        document.write(a + '<br>');
+        document.write(b + '<br>');
+
+    </script>
+</body>
+
+</html>

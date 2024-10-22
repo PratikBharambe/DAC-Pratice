@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JSON Tutorial 01</h1>
+    <p id="demo"></p>
+    <script>
+        const text = '{"name": "Name Value","institute": "institute","Boolean": true}'
+
+        const obj = JSON.parse(text);
+
+        document.getElementById('demo').innerHTML = `${obj.name} ${obj.institute} ${obj.Boolean}`
+    </script>
+</body>
+
+</html>
