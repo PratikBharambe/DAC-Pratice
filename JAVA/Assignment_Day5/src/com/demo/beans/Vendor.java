@@ -45,7 +45,7 @@ public class Vendor extends Employee {
 
 	@Override
 	public String toString() {
-		return super.toString() + " Vendor [noOfEmp=" + noOfEmp + ", amt=" + amt + "] ";
+		return super.toString() + "Vendor [noOfEmp=" + noOfEmp + ", amt=" + amt + "]";
 	}
 
 }

@@ -66,7 +66,7 @@ public class PersonService {
 		for (Student s : sarr) {
 			if (s != null) {
 				if (s.getPid() == id) {
-					// dynamic polymorphisum
+					// dynamic polymorphism
 					float mks = s.calculateGrade();
 					return mks;
 				}
@@ -92,6 +92,29 @@ public class PersonService {
 	        }
 	    }
 	    return false; // Student not found
+	}
+	
+	private static Student getById(int id) {
+		for(Student s : sarr) {
+			if(s.getPid() == id) {
+				return s;
+			}
+		}
+		return null;
+	}
+
+	public static boolean updateMarksById(int id, int marks) {
+		Student s = getById(id);
+		if (s != null) {
+			if(s instanceof GraduateStudent) {
+				((GraduateStudent)s).setSpsub(marks);
+			}else if (s instanceof MasterStudent) {
+				((MasterStudent)s).setThesismarks(marks);
+			}else {
+				return true;
+			}
+		}
+		return false;
 	}
 
 }

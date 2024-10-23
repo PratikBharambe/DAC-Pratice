@@ -28,8 +28,6 @@ public class TestDynamicArray {
 			}
 			System.out.println();
 		}
-		
-		sc.close();
 	}
 
 }

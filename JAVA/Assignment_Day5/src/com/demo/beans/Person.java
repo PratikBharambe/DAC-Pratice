@@ -48,7 +48,7 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return " Person [perId=" + perId + ", pName=" + pName + ", mob=" + mob + ", email=" + email + "] ";
+		return "Person [perId=" + perId + ", pName=" + pName + ", mob=" + mob + ", email=" + email + "]";
 	}
 
 }

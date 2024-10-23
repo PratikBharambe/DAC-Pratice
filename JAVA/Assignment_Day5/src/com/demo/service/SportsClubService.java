@@ -48,7 +48,7 @@ public class SportsClubService {
 		System.out.print("Enter you choice : ");
 		return sc.nextInt();
 	}
-	
+
 	// case 1 to add new employee in the sports club
 	public static boolean addNewEmployee() {
 		System.out.println("1. Add salaried employee.");
@@ -56,20 +56,20 @@ public class SportsClubService {
 		System.out.println("3. Add vendor employee.");
 		System.out.println("Choose the type of the employee : ");
 		int choice = sc.nextInt();
-		
+
 		// implementing default case
-		if(choice != 1 && choice != 2 && choice != 3) {
+		if (choice != 1 && choice != 2 && choice != 3) {
 			System.out.println("Invalid choice !!");
 			return false;
 		}
-		
+
 		System.out.print("Enter name : ");
 		sc.nextLine();
 		String name = sc.nextLine();
 		System.out.print("Enter Mobile number : ");
 		String mobile = sc.nextLine();
 		System.out.print("Enter email Id : ");
-		String mail =sc.nextLine();
+		String mail = sc.nextLine();
 		System.out.print("Enter designation : ");
 		String designation = sc.nextLine();
 		System.out.print("Enter department : ");
@@ -77,17 +77,18 @@ public class SportsClubService {
 		System.out.print("Enter data of joining in (dd/MM/yyyy) format : ");
 		String dt = sc.next();
 		LocalDate doj = LocalDate.parse(dt, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-		
+
 		// case 1 to add new salaried employee
-		if(choice == 1) {
+		if (choice == 1) {
 			System.out.print("Enter Salary : ");
 			float salary = sc.nextFloat();
 			personArray[count] = new SalariedEmployee(name, mobile, mail, department, designation, doj, salary);
 			count++;
 			return true;
-		} 
+		}
+
 		// case 2 to add new contracted employee
-		else if(choice == 2) {
+		else if (choice == 2) {
 			System.out.print("Enter hours : ");
 			float hrs = sc.nextFloat();
 			System.out.print("Enter charge per hour : ");
@@ -95,9 +96,10 @@ public class SportsClubService {
 			personArray[count] = new ContractEmployee(name, mobile, mail, department, designation, doj, hrs, charge);
 			count++;
 			return true;
-		} 
+		}
+
 		// case 3 to add new vender employee
-		else if(choice == 3) {
+		else if (choice == 3) {
 			System.out.print("Enter the number of employees : ");
 			int noOfEmp = sc.nextInt();
 			System.out.print("Enter the amount per employee : ");
@@ -106,10 +108,10 @@ public class SportsClubService {
 			count++;
 			return true;
 		}
-		
+
 		return false;
 	}
-	
+
 	// case 2 to add member to the sports club
 	public static boolean addNewMember() {
 		System.out.print("Enter name : ");
@@ -118,13 +120,13 @@ public class SportsClubService {
 		System.out.print("Enter Mobile number : ");
 		String mobile = sc.nextLine();
 		System.out.print("Enter email Id : ");
-		String mail =sc.nextLine();
+		String mail = sc.nextLine();
 		System.out.print("Enter type of member : ");
 		String type = sc.nextLine();
 		System.out.print("Enter amount paid : ");
 		float amountPaid = sc.nextFloat();
 		personArray[count] = new Member(name, mobile, mail, type, amountPaid);
-		return true;	
+		return true;
 	}
 
 	// case 3 to display all the available person in the sports club
@@ -166,21 +168,25 @@ public class SportsClubService {
 					if (p instanceof Employee)
 						System.out.println(p);
 				}
+				
 				// case 2 to get all salaried employees
 				else if (choice == 2) {
 					if (p instanceof SalariedEmployee)
 						System.out.println(p);
 				}
+				
 				// case 3 to get all contracted employees
 				else if (choice == 3) {
 					if (p instanceof ContractEmployee)
 						System.out.println(p);
 				}
+				
 				// case 4 to get all vendor employees
 				else if (choice == 4) {
 					if (p instanceof Vendor)
 						System.out.println(p);
 				}
+				
 				// default case
 				else {
 					System.out.println("Invalid Choice !!");
@@ -189,7 +195,9 @@ public class SportsClubService {
 			} else {
 				break;
 			}
+			
 		}
+		
 	}
 
 }

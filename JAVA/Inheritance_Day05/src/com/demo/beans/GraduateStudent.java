@@ -42,5 +42,4 @@ public class GraduateStudent extends Student {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
 }

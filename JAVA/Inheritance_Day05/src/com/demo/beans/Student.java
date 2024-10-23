@@ -11,7 +11,7 @@ abstract public class Student extends Person {
 	}
 
 	public Student(int pid, String pname, String address, LocalDate bdate, int[] marks) {
-		super(pid, pname, address, bdate); // calls parametrized constructor of parent
+		super(pid, pname, address, bdate); // calls parameterized constructor of parent
 		System.out.println("in student parametrized constructor");
 		this.marks = marks;
 	}

@@ -6,12 +6,10 @@ public interface StudentService {
 
 	void displayAll();
 
-	void addStudent();
+	Student searchById(int id);
 
-	Student findById(int id);
+	Student[] getByName(String name);
 
-	Student[] findByName(String name);
-
-	float calculateGpa(int id);
+	float calculateGPA(int id1);
 
 }

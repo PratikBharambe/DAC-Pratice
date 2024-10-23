@@ -44,7 +44,7 @@ public class Member extends Person {
 
 	@Override
 	public String toString() {
-		return super.toString() + " Member [type=" + type + ", amtPaid=" + amtPaid + "] ";
+		return super.toString() + "Member [type=" + type + ", amtPaid=" + amtPaid + "]";
 	}
 
 }

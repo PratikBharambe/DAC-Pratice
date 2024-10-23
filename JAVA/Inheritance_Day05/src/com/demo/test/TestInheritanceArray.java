@@ -26,7 +26,7 @@ public class TestInheritanceArray {
 			switch (choice) {
 			
 			case 1:
-				System.out.println("1. GraduateStudent");
+				System.out.println("1. Graduate Student");
 				System.out.println("2. MasterStudent");
 				System.out.println("3.Facutly");
 				System.out.println("Choice:");
@@ -45,6 +45,11 @@ public class TestInheritanceArray {
 				break;
 				
 			case 3:
+				System.out.println("Enter Id : ");
+				id = sc.nextInt();
+				System.out.println("Enter new marks : ");
+				int marks = sc.nextInt();
+				status = PersonService.updateMarksById(id, marks);
 				break;
 				
 			case 4:
@@ -68,9 +73,9 @@ public class TestInheritanceArray {
 			case 6:
 				System.out.println("Enter id");
 				id = sc.nextInt();
-				float marks = PersonService.findGrade(id);
-				if (marks > 0) {
-					System.out.println("Marks : " + marks);
+				float marks1 = PersonService.findGrade(id);
+				if (marks1 > 0) {
+					System.out.println("Marks : " + marks1);
 				} else {
 					System.out.println("not found");
 				}
@@ -86,6 +91,9 @@ public class TestInheritanceArray {
 					}
 				}
 
+				
+				
+				
 				break;
 				
 			case 8:

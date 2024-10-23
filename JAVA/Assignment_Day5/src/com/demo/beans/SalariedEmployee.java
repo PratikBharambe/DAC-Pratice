@@ -36,7 +36,7 @@ public class SalariedEmployee extends Employee {
 
 	@Override
 	public String toString() {
-		return super.toString() + " SalariedEmployee [Sal=" + Sal + "] ";
+		return super.toString() + "SalariedEmployee [Sal=" + Sal + "]";
 	}
 
 }

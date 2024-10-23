@@ -15,14 +15,13 @@ public class TestInheritance {
 		GraduateStudent g = new GraduateStudent(12, "xxx", "pune", LocalDate.of(2000, 04, 27), new int[] { 12, 34 },
 				89);
 		System.out.println(g);
-		// static polymorphism
+		// static polymorphisum 
 		System.out.println("Grade: " + g.calculateGrade());
 		MasterStudent m = new MasterStudent(12, "xxx", "pune", LocalDate.of(2000, 04, 27), new int[] { 12, 34 }, "yyyy",
 				"BSC", 89);
 		System.out.println(m);
-		// static polymorphism
+		// static polymorphisum
 		System.out.println("Grade: " + m.calculateGrade());
 
 	}
-
 }

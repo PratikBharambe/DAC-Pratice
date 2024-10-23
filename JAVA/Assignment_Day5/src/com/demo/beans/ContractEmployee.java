@@ -46,6 +46,6 @@ public class ContractEmployee extends Employee {
 
 	@Override
 	public String toString() {
-		return super.toString() + " ContractEmployee [hrs=" + hrs + ", hrsCharge=" + hrsCharge + "] ";
+		return super.toString() + "ContractEmployee [hrs=" + hrs + ", hrsCharge=" + hrsCharge + "]";
 	}
 }

@@ -12,7 +12,7 @@ public class MasterStudent extends Student {
 
 	public MasterStudent(int pid, String pname, String address, LocalDate bdate, int[] marks, String thesissub,
 			String degree, int thesismarks) {
-		// calls parametrised constructor
+		// calls parameterized constructor
 		// use super, then that line has to be the first line of the function
 		super(pid, pname, address, bdate, marks);
 		System.out.println("in MasterStudent parametrized constructor");
@@ -51,11 +51,10 @@ public class MasterStudent extends Student {
 		return ((marks[0] + marks[1]) * 0.20f) + thesismarks;
 	}
 	
-	
 //	to-do
 //	public boolean updateMarks() {
 //		System.out.println("Enter new marks for thesis");
-////		int newMarks = sc.nextInt();
+//		int newMarks = sc.nextInt();
 //	}
 
 	@Override
@@ -69,5 +68,4 @@ public class MasterStudent extends Student {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
 }

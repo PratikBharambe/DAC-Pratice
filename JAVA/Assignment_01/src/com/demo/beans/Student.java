@@ -59,8 +59,8 @@ public class Student {
 		this.m3 = m3;
 	}
 	
-	public float calculateGPA() {
-		return ((1/3)*m1+(1/2)*m2+(1/4)*m3);
+	public float calculateGpa() {
+		return ((1/3)*m1)+((1/2)*m2)+((1/4)*m3);
 	}
 
 	@Override

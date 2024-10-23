@@ -49,6 +49,4 @@ public class Person {
 	public String toString() {
 		return "Person [pid=" + pid + ", pname=" + pname + ", address=" + address + ", bdate=" + bdate + "]";
 	}
-	
-
 }
