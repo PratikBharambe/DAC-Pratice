@@ -38,14 +38,15 @@ public class SinglySortedLinkedListService {
 		// create a temporary node and a previous node to traverse over linked list
 		Node temp = head, prev = null;
 		// Checking whether the data in head is greater than the given value
-		if(head.data > data) {
-			// if head.data is greater than given data to insert then add data in linked list
+		if (head.data > data) {
+			// if head.data is greater than given data to insert then add data in linked
+			// list
 			newNode.next = head;
 			head = newNode;
 		} else {
-			// if value is not to added at head then 
+			// if value is not to added at head then
 			// Traverse till node where newNode to get added
-			while(temp != null && temp.data < data) {
+			while (temp != null && temp.data < data) {
 				prev = temp;
 				temp = temp.next;
 			}
