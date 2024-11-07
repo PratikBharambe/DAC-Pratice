@@ -80,11 +80,15 @@ public class TestDoublyLinkedList {
 		
 		System.out.println("-------------------------------------------------------------");
 		
-		int data = lst.searchByValue(6);
+		int data = lst.searchByPosition(6);
 		if(data != -1)
 			System.out.println("The data is : " + data);
 		else 
 			System.out.println("position is beyond limit.");
+		
+		System.out.println("-------------------------------------------------------------");
+		
+		lst.displayDataInReverseOrder();
 		
 	}
 	

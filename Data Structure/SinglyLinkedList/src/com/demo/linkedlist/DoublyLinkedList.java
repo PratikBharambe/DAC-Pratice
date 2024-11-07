@@ -137,28 +137,28 @@ public class DoublyLinkedList {
 			}
 		}
 	}
-	
+
 	public int searchByValue(int val) {
-		if(head == null)
+		if (head == null)
 			System.out.println("List is empty.");
 		else {
 			Node temp = head;
-			for(int i = 1 ; temp != null ; i++) {
-				if(temp.data == val)
+			for (int i = 1; temp != null; i++) {
+				if (temp.data == val)
 					return i;
 				temp = temp.next;
 			}
 		}
 		return -1;
 	}
-	
+
 	public int searchByPosition(int pos) {
-		if(head == null)
+		if (head == null)
 			System.out.println("List is empty.");
 		else {
 			Node temp = head;
-			for(int i = 1 ; temp != null ; i++) {
-				if(i == pos)
+			for (int i = 1; temp != null; i++) {
+				if (i == pos)
 					return temp.data;
 				temp = temp.next;
 			}
@@ -177,6 +177,23 @@ public class DoublyLinkedList {
 			}
 			System.out.print("Null.\n");
 		}
+	}
+
+	public void displayDataInReverseOrder() {
+
+		if (head == null) {
+			System.out.println("List is empty.");
+		} else {
+			Node temp = head;
+			while(temp.next != null)
+				temp = temp.next;
+			while(temp != null) {
+				System.out.print(temp.data + " -> ");
+				temp = temp.prev;
+			}
+			System.out.println("Null.\n");
+		}
+
 	}
 
 }
