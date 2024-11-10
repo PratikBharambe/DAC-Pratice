@@ -2,7 +2,7 @@ package com.demo.test;
 
 import java.util.Scanner;
 import java.util.stream.Stream;
-
+            
 public class TestBinarySearch {
 
 	public static void main(String[] args) {
@@ -38,11 +38,12 @@ public class TestBinarySearch {
 			} else if (num < arr[mid]) {
 				return binarySearch(arr, l, mid - 1, num);
 			} else {
+
 				return binarySearch(arr, mid + 1, h, num);
 			}
 		}
 
 		return -1;
 	}
-
+	
 }

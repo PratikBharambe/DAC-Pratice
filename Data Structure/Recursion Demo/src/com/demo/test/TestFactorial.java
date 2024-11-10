@@ -21,5 +21,4 @@ public class TestFactorial {
 		System.out.println("Addition without using recursion : " + factoUsingRecursion(5));
 
 	}
-
 }

@@ -31,13 +31,14 @@ public class MyListCharStack {
 		}
 
 	}
+
 	public char pop() {
-		if(isEmpty()){
+		if (isEmpty()) {
 			System.out.println("stack is empty");
 			return '$';
-		}else {
+		} else {
 			Node temp = top;
-			top=top.next;
+			top = top.next;
 			temp.next = null;
 			return temp.data;
 		}
