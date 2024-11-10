@@ -1,0 +1,24 @@
+/* src/App.css */
+.display {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  background-image: url("./Bg.jpg");
+  color: whitesmoke;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+button {
+  padding: 10px;
+  font-size: 1.5rem;
+  background-image: url("./Bg.jpg");
+  color: bisque;
+}

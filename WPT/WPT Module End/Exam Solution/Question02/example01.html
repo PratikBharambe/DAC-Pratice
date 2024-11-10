@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>
+      <div id="op"></div>
+    </h3>
+
+    <script>
+      const arr = ["Hello", "World", "Test", "Demo", "IET"];
+      let [first, , , , last] = arr;
+      document.getElementById(
+        "op"
+      ).innerHTML = `Value at 0 index is : ${first} <br> Value at 1 index is :  ${last}.`;
+    </script>
+  </body>
+</html>

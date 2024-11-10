@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        lable {
+            margin: 10px;
+            padding: 10px;
+        }
+
+        imput{
+            margin: 10px;
+            padding: 5px;
+        }
+        #ip{
+            border: red;
+            margin: 5px;
+            padding: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Simple Intrest Calculator</h1>
+    <hr />
+    <div id="ip">
+      <label for="principal">Enter principal</label>
+      <input type="text" id="principal" name="principal" />
+      <br />
+      <label for="amount">Enter amount</label>
+      <input type="text" id="amount" name="amount" />
+      <br />
+      <label for="time">Enter time</label>
+      <input type="text" id="time" name="time" />
+      <br />
+      <label for="rate">Enter rate</label>
+      <input type="text" id="rate" name="Rate" />
+      <br />
+      <input
+        type="submit"
+        value="Calculate Simple Intreast"
+        onclick="calculateSimpleIntreast()"
+      />
+    </div>
+    <div class="output">
+      <h2><output id="op"></output></h2>
+    </div>
+
+    <script>
+      function calculateSimpleIntreast() {
+        let principal = Number.parseInt(
+          document.getElementById("principal").value
+        );
+        let amount = Number.parseInt(document.getElementById("amount").value);
+        let time = Number.parseInt(document.getElementById("time").value);
+        let rate = Number.parseInt(document.getElementById("rate").value);
+
+        let simpleIntrest = principal - (1 - (rate / time) ** rate * time);
+
+        document.getElementById(
+          "op"
+        ).innerHTML = `The simple intrest is : ${simpleIntrest}`;
+      }
+    </script>
+  </body>
+</html>

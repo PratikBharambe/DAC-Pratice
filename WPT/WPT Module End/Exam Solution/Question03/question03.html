@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <ul>
+        <li>list 1</li>
+        <li>list 2</li>
+        <li>list 3</li>
+        <li>list 4</li>
+        <li>list 5</li>
+    </ul>
+
+    <div>
+        <p id="first">first</p>
+        <p id="second">second</p>
+        <p id="first">third</p>
+        <p id="fourth">fourth</p>
+        <p id="fifth">fifth</p>
+
+        <p class="remaining">hello world</p>
+    </div>
+
+    <script>
+        $("li").first().css("color", "red");
+
+
+        $("p#second").css("border", "red solid 10px");
+
+
+        $("p").css("background", "green");
+
+
+        $("p.remaining").css("width", "200px");
+
+
+        $("p").eq(2).css("font-size", "30px");
+
+
+
+
+    </script>
+</body>
+</html>
