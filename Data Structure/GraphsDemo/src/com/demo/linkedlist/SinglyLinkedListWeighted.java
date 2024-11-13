@@ -9,6 +9,7 @@ public class SinglyLinkedListWeighted {
 
 		public Node(int data, int weight) {
 			this.data = data;
+			this.weight = weight;
 			this.next = null;
 		}
 	}
