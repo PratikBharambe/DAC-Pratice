@@ -28,6 +28,19 @@ public class SinglyLinkedList {
 		}
 	}
 	
+	public int[] getAdjecentNodes(int[] arr) {
+		if(head == null) {
+			return arr;
+		} else {
+			Node temp = head;
+			for(int i = 0 ; temp != null && i < arr.length; i++) {
+				arr[i] = temp.data;
+				temp = temp.next;
+			}
+		}
+		return arr;
+	}
+	
 	public void displayList() {
 		if(head == null) {
 			System.out.println("List is empty.");

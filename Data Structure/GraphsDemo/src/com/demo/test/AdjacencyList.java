@@ -19,6 +19,10 @@ public class AdjacencyList {
 
 		System.out.println();
 		graph.displayList();
+		
+		graph.DSF(0);
+		
+		graph.BSF(0);
 
 	}
 
@@ -30,7 +34,7 @@ public class AdjacencyList {
 			for (int j = 0; j < noOfVertices; j++) {
 				System.out.print("Is there edge between " + i + " and " + j + " ( 1 or 0 )  : ");
 				int isEdge = sc.nextInt();
-				if (isEdge == 1) {
+				if (isEdge != 0) {
 					graph.addEdge(i, j);
 				}
 			}
