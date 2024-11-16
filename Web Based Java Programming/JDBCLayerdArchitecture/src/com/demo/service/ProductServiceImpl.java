@@ -70,6 +70,21 @@ public class ProductServiceImpl implements ProductService {
 	public void closeMyConnection() {
 		productDao.closeConnection();
 	}
+
+	@Override
+	public List<Product> getAllProductsSortedByPrice() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("1. Sorted in asending order.");
+		System.out.println("2. Sorted in decending order.");
+		System.out.print("Enter your choice : ");
+		int choice = sc.nextInt();
+		return productDao.getSortedByPrice(choice);
+	}
+
+	@Override
+	public Product getByName(String name) {
+		return productDao.getByName(name);
+	}
 	
 	
 	

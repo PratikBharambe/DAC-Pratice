@@ -19,7 +19,9 @@ public class ProductDaoImpl implements ProductDao {
 	private static PreparedStatement updateStatement;
 	private static PreparedStatement selectStatement;
 	private static PreparedStatement getByIdStatement;
+	private static PreparedStatement getByNameStatement;
 	private static PreparedStatement getSortedByNameStatement;
+	private static PreparedStatement getSortedByPriceStatement;
 
 	static {
 		connection = DBUtil.getConnection();
@@ -29,7 +31,9 @@ public class ProductDaoImpl implements ProductDao {
 			updateStatement = connection.prepareStatement("update product set qty = ?, price = ? where id = ?");
 			selectStatement = connection.prepareStatement("select * from product");
 			getByIdStatement = connection.prepareStatement("select * from product where id = ?");
+			getByNameStatement = connection.prepareStatement("select * from product where name = ?");
 			getSortedByNameStatement = connection.prepareStatement("select * from product order by name");
+			getSortedByPriceStatement = connection.prepareStatement("select * from product order by price ?");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -134,6 +138,46 @@ public class ProductDaoImpl implements ProductDao {
 	@Override
 	public void closeConnection() {
 		DBUtil.closeMyConnection();
+	}
+
+	@Override
+	public List<Product> getSortedByPrice(int choice) {
+		List<Product> productList = new ArrayList<Product>();
+		try {
+			if(choice == 1)
+				getSortedByPriceStatement.setString(1, "asc");
+			else if(choice == 2)
+				getSortedByPriceStatement.setString(1, "desc");
+			else 
+				System.out.println("Invalid choice.");
+			ResultSet rs = getSortedByPriceStatement.executeQuery();
+			while(rs.next()) {
+				Product p = new Product(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getDouble(4), rs.getDate(5).toLocalDate(), rs.getInt(6));
+				productList.add(p);
+			}
+			if(productList.size()>0) {
+				return productList;
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	@Override
+	public Product getByName(String name) {
+		try {
+			getByIdStatement.setString(1, name);
+			ResultSet rs = getByIdStatement.executeQuery();
+			if(rs.next()) {
+				return new Product(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getDouble(4), rs.getDate(5).toLocalDate(), rs.getInt(6));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 }

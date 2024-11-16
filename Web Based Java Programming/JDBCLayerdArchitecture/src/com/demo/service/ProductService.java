@@ -20,4 +20,8 @@ public interface ProductService {
 
 	void closeMyConnection();
 
+	List<Product> getAllProductsSortedByPrice();
+
+	Product getByName(String name);
+
 }

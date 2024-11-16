@@ -53,83 +53,83 @@ public class TestCRUDJDBCDemo {
 				// switch case
 				switch (choice) {
 
-					// case 1 to add new product
-					case 1 -> {
-						boolean status = productService.addProduct();
-						if (status)
-							System.out.println("Insertion Done Succesfully.");
-						else
-							System.out.println("Error in inserting new product.");
+				// case 1 to add new product
+				case 1 -> {
+					boolean status = productService.addProduct();
+					if (status)
+						System.out.println("Insertion Done Succesfully.");
+					else
+						System.out.println("Error in inserting new product.");
+				}
+
+				// case 2 to delete product
+				case 2 -> {
+					System.out.print("Enter id of the product : ");
+					int id = sc.nextInt();
+					boolean status = productService.deletById(id);
+					if (status)
+						System.out.println("Deletion Done Succesfully.");
+					else
+						System.out.println("Id not found.");
+				}
+
+				// case 3 to update product
+				case 3 -> {
+					System.out.print("Enter id : ");
+					int id = sc.nextInt();
+					System.out.print("Enter new quantity : ");
+					int quantity = sc.nextInt();
+					System.out.print("Enter new price : ");
+					double price = sc.nextDouble();
+					boolean status = productService.updateById(id, quantity, price);
+					if (status) {
+						System.out.println("Updated successfully.");
+					} else {
+						System.out.println("Id not found.");
 					}
-	
-					// case 2 to delete product
-					case 2 -> {
-						System.out.print("Enter id of the product : ");
-						int id = sc.nextInt();
-						boolean status = productService.deletById(id);
-						if (status)
-							System.out.println("Deletion Done Succesfully.");
-						else
-							System.out.println("Id not found.");
+				}
+
+				// case 4 to display all products
+				case 4 -> {
+					List<Product> productList = productService.getAllProducts();
+					if (productList != null) {
+						productList.stream().forEach(System.out::println);
+					} else {
+						System.out.println("Products not found.");
 					}
-	
-					// case 3 to update product
-					case 3 -> {
-						System.out.print("Enter id : ");
-						int id = sc.nextInt();
-						System.out.print("Enter new quantity : ");
-						int quantity = sc.nextInt();
-						System.out.print("Enter new price : ");
-						double price = sc.nextDouble();
-						boolean status = productService.updateById(id, quantity, price);
-						if (status) {
-							System.out.println("Updated successfully.");
-						} else {
-							System.out.println("Id not found.");
-						}
+				}
+
+				// case 5 to get a product by id
+				case 5 -> {
+					System.out.print("Enter id : ");
+					int id = sc.nextInt();
+					Product p = productService.getById(id);
+					if (p != null) {
+						System.out.println(p);
+					} else {
+						System.out.println("Product not found");
 					}
-	
-					// case 4 to display all products
-					case 4 -> {
-						List<Product> productList = productService.getAllProducts();
-						if (productList != null) {
-							productList.stream().forEach(System.out::println);
-						} else {
-							System.out.println("Products not found.");
-						}
+				}
+
+				// case 6 to get all product sorted by name
+				case 6 -> {
+					List<Product> productList = productService.getSortedByName();
+					if (productList != null) {
+						productList.stream().forEach(System.out::println);
+					} else {
+						System.out.println("not found");
 					}
-	
-					// case 5 to get a product by id
-					case 5 -> {
-						System.out.print("Enter id : ");
-						int id = sc.nextInt();
-						Product p = productService.getById(id);
-						if (p != null) {
-							System.out.println(p);
-						} else {
-							System.out.println("not found");
-						}
-					}
-	
-					// case 6 to get all product sorted by name
-					case 6 -> {
-						List<Product> productList = productService.getSortedByName();
-						if (productList != null) {
-							productList.stream().forEach(System.out::println);
-						} else {
-							System.out.println("not found");
-						}
-					}
-	
-					// case 7 to terminate the execution flow
-					case 7 -> {
-						System.out.println("Thank you for visiting....");
-						productService.closeMyConnection();
-					}
-	
-					default -> {
-						System.out.println("Invalid choice.");
-					}
+				}
+
+				// case 7 to terminate the execution flow
+				case 7 -> {
+					System.out.println("Thank you for visiting....");
+					productService.closeMyConnection();
+				}
+
+				default -> {
+					System.out.println("Invalid choice.");
+				}
 
 				}
 			} while (choice != 7);
@@ -138,7 +138,55 @@ public class TestCRUDJDBCDemo {
 
 		// if user is user
 		if (user != null && user.getRole().equals("user")) {
+			do {
+				System.out.println("1. Display all products sorted by price.");
+				System.out.println("2. Display Product by id.");
+				System.out.println("3. Display product by name.");
+				System.out.println("4. exit.");
+				System.out.print("Enter your choice : ");
+				choice = sc.nextInt();
 
+				switch (choice) {
+				case 1 -> {
+					List<Product> productList = productService.getAllProductsSortedByPrice();
+					if (productList != null) {
+						productList.stream().forEach(System.out::println);
+					} else {
+						System.out.println("Products not found.");
+					}
+				}
+				
+				case 2 -> {
+					System.out.print("Enter id : ");
+					int id = sc.nextInt();
+					Product p = productService.getById(id);
+					if (p != null) {
+						System.out.println(p);
+					} else {
+						System.out.println("Product not found");
+					}
+				}
+				
+				case 3 -> {
+					System.out.print("Enter product name : ");
+					String name = sc.next();
+					Product p = productService.getByName(name);
+					if (p != null) {
+						System.out.println(p);
+					} else {
+						System.out.println("Product not found");
+					}
+				}
+				
+				case 4 -> {
+					System.out.println("Thank you for visiting....");
+					productService.closeMyConnection();
+				}
+				default -> {
+					System.out.println("Invalid choice.");
+				}
+				}
+			} while (choice != 4);
 		}
 
 		sc.close();

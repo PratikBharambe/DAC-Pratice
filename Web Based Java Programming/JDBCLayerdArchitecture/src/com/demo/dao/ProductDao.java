@@ -20,4 +20,8 @@ public interface ProductDao {
 
 	void closeConnection();
 
+	List<Product> getSortedByPrice(int choice);
+
+	Product getByName(String name);
+
 }
