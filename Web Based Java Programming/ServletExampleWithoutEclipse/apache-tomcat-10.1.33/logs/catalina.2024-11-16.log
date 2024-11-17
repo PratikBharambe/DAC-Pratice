@@ -1,0 +1,48 @@
+16-Nov-2024 18:29:14.579 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.33
+16-Nov-2024 18:29:14.586 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 7 2024 22:28:55 UTC
+16-Nov-2024 18:29:14.587 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.33.0
+16-Nov-2024 18:29:14.587 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+16-Nov-2024 18:29:14.587 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+16-Nov-2024 18:29:14.588 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+16-Nov-2024 18:29:14.588 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-17
+16-Nov-2024 18:29:14.592 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.11+7-LTS-207
+16-Nov-2024 18:29:14.599 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+16-Nov-2024 18:29:14.599 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\IET\Desktop\J2EE\apache-tomcat-10.1.33
+16-Nov-2024 18:29:14.599 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\IET\Desktop\J2EE\apache-tomcat-10.1.33
+16-Nov-2024 18:29:14.605 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\IET\Desktop\J2EE\apache-tomcat-10.1.33\conf\logging.properties
+16-Nov-2024 18:29:14.605 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+16-Nov-2024 18:29:14.605 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+16-Nov-2024 18:29:14.606 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+16-Nov-2024 18:29:14.606 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+16-Nov-2024 18:29:14.606 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+16-Nov-2024 18:29:14.607 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+16-Nov-2024 18:29:14.610 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+16-Nov-2024 18:29:14.611 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+16-Nov-2024 18:29:14.612 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\IET\Desktop\J2EE\apache-tomcat-10.1.33
+16-Nov-2024 18:29:14.613 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\IET\Desktop\J2EE\apache-tomcat-10.1.33
+16-Nov-2024 18:29:14.613 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\IET\Desktop\J2EE\apache-tomcat-10.1.33\temp
+16-Nov-2024 18:29:14.617 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+16-Nov-2024 18:29:14.624 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+16-Nov-2024 18:29:14.916 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+16-Nov-2024 18:29:14.956 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [603] milliseconds
+16-Nov-2024 18:29:15.026 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+16-Nov-2024 18:29:15.026 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.33]
+16-Nov-2024 18:29:15.041 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\IET\Desktop\J2EE\apache-tomcat-10.1.33\webapps\docs]
+16-Nov-2024 18:29:15.525 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\IET\Desktop\J2EE\apache-tomcat-10.1.33\webapps\docs] has finished in [483] ms
+16-Nov-2024 18:29:15.526 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\IET\Desktop\J2EE\apache-tomcat-10.1.33\webapps\examples]
+16-Nov-2024 18:29:16.234 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\IET\Desktop\J2EE\apache-tomcat-10.1.33\webapps\examples] has finished in [708] ms
+16-Nov-2024 18:29:16.235 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\IET\Desktop\J2EE\apache-tomcat-10.1.33\webapps\host-manager]
+16-Nov-2024 18:29:16.305 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\IET\Desktop\J2EE\apache-tomcat-10.1.33\webapps\host-manager] has finished in [70] ms
+16-Nov-2024 18:29:16.305 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\IET\Desktop\J2EE\apache-tomcat-10.1.33\webapps\manager]
+16-Nov-2024 18:29:16.354 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\IET\Desktop\J2EE\apache-tomcat-10.1.33\webapps\manager] has finished in [49] ms
+16-Nov-2024 18:29:16.354 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\IET\Desktop\J2EE\apache-tomcat-10.1.33\webapps\MyProject]
+16-Nov-2024 18:29:16.409 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\IET\Desktop\J2EE\apache-tomcat-10.1.33\webapps\MyProject] has finished in [55] ms
+16-Nov-2024 18:29:16.410 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\IET\Desktop\J2EE\apache-tomcat-10.1.33\webapps\ROOT]
+16-Nov-2024 18:29:16.451 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\IET\Desktop\J2EE\apache-tomcat-10.1.33\webapps\ROOT] has finished in [42] ms
+16-Nov-2024 18:29:16.459 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+16-Nov-2024 18:29:16.520 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1561] milliseconds
+16-Nov-2024 18:30:13.287 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+16-Nov-2024 18:30:13.287 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+16-Nov-2024 18:30:13.335 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+16-Nov-2024 18:30:13.360 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+16-Nov-2024 18:30:13.367 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
