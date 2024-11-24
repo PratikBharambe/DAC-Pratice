@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <div>
+        <div><h1>Registration Form</h1></div>
+        <div><hr></div>
+    </div>
+    <div>
+        <form action="registerUser" method="post">
+            <table>
+                <tr>
+                    <td><label for="firstName">Enter First Name : </label></td>
+                    <td><input type="text" name="firstName" id="firstName" placeholder="first name"></td>
+                </tr>
+                <tr>
+                    <td><label for="lastName">Enter Last Name : </label></td>
+                    <td><input type="text" name="lastName" id="lastName" placeholder="last name"></td>
+                </tr>
+                <tr>
+                    <td><label for="username">Enter Username : </label></td>
+                    <td><input type="text" name="username" id="username" placeholder="username"></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Enter Password : </label></td>
+                    <td><input type="password" name="password" id="password" placeholder="password"></td>
+                </tr>
+                <tr>
+                    <td><label for="gender">Select Gender : </label></td>
+                    <td>
+                        <input type="radio" name="gender" id="mgender" value = "male">
+                        <label for="mgender">Male</label>
+                        <input type="radio" name="gender" id="fgender" value = "female">
+                        <label for="fgender">Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="skills">Select Skills : </label></td>
+                    <td>
+                        <input type="checkbox" name="skills" id="java" value="java"><label for="java">Java</label>
+                        <input type="checkbox" name="skills" id="python" value="python"><label for="python">Python</label>
+                        <input type="checkbox" name="skills" id="cpp" value="cpp"><label for="cpp">cpp</label>
+                        <input type="checkbox" name="skills" id="perl" value="perl"><label for="perl">Perl</label>
+                        <input type="checkbox" name="skills" id="c#" value="c#"><label for="c#">C#</label>
+                        <input type="checkbox" name="skills" id="ruby" value="ruby"><label for="ruby">Ruby</label>
+                    </td>
+                </tr>
+                 <tr>
+                    <td><label for="degree">Select Degree : </label></td>
+                    <td>
+                        <input type="radio" name="degree" id="BE" value = "BE">
+                        <label for="BE">BE</label>
+                        <input type="radio" name="degree" id="B.Tech" value = "B.Tech">
+                        <label for="B.Tech">B.Tech</label>
+                        <input type="radio" name="degree" id="M.Tech" value = "M.Tech">
+                        <label for="M.Tech">M.Tech</label>
+                        <input type="radio" name="degree" id="PHD" value = "PHD">
+                        <label for="PHD">PHD</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="cities">Select City</label></td>
+                    <td>
+                        <Select name="city" id="city">
+                            <option value="pune">Pune</option>
+                            <option value="mumbai">Mumbai</option>
+                            <option value="goa">Gao</option>
+                            <option value="banglore">Banglore</option>
+                        </Select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><button type="submit" name="btn" id="btn">Register</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
