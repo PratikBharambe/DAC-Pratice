@@ -2,68 +2,58 @@ package com.demo.beans;
 
 public class Product {
 
-	private int pid;
-	private String pname;
+	private int id;
+	private String name;
 	private int qty;
 	private double price;
 
 	public Product() {
 		super();
-		System.out.println("Inside product's default constructor.");
 	}
 
-	public Product(int pid, String pname, int qty, double price) {
+	public Product(int id, String name, int qty, double price) {
 		super();
-		this.pid = pid;
-		this.pname = pname;
+		this.id = id;
+		this.name = name;
 		this.qty = qty;
 		this.price = price;
-		System.out.println("Inside product's parameterized constructor.");
 	}
 
-	public int getPid() {
-		System.out.println("Inside getPid() method");
-		return pid;
+	public int getId() {
+		return id;
 	}
 
-	public void setPid(int pid) {
-		System.out.println("Inside setPid() method");
-		this.pid = pid;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public String getPname() {
-		System.out.println("Inside getPname() method");
-		return pname;
+	public String getName() {
+		return name;
 	}
 
-	public void setPname(String pname) {
-		System.out.println("Inside setPname() method");
-		this.pname = pname;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public int getQty() {
-		System.out.println("Inside getQty() method");
 		return qty;
 	}
 
 	public void setQty(int qty) {
-		System.out.println("Inside setQty() method");
 		this.qty = qty;
 	}
 
 	public double getPrice() {
-		System.out.println("Inside getPrice() method");
 		return price;
 	}
 
 	public void setPrice(double price) {
-		System.out.println("Inside setPrice() method");
 		this.price = price;
 	}
 
 	@Override
 	public String toString() {
-		return "Product [pid=" + pid + ", pname=" + pname + ", qty=" + qty + ", price=" + price + "]";
+		return "Product [id=" + id + ", name=" + name + ", qty=" + qty + ", price=" + price + "]";
 	}
 
 }
