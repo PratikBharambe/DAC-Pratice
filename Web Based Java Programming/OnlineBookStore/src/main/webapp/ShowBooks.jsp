@@ -36,7 +36,7 @@
 						<td>${b.name}</td>
 						<td>${b.auther}</td>
 						<td>${b.price}</td>
-						<td><input type="number" name="p${b.id}" id="${b.id}"></td>
+						<td><input type="number" name="b${b.id}" id="${b.id}"></td>
 					</tr>
 
 				</c:forEach>

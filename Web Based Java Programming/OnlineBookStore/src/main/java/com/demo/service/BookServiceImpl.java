@@ -24,6 +24,11 @@ public class BookServiceImpl implements BookService {
 	public List<Book> getBooksById(int id) {
 		return bd.getBooksById(id);
 	}
+
+	@Override
+	public Book getBookById(int id) {
+		return bd.getBooById(id);
+	}
 	
 	
 

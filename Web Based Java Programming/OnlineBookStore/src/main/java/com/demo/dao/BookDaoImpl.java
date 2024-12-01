@@ -15,12 +15,14 @@ public class BookDaoImpl implements BookDao {
 	private static Connection conn;
 	private static PreparedStatement getAllCatagory;
 	private static PreparedStatement getBooksById;
+	private static PreparedStatement getBookById;
 
 	static {
 		try {
 			conn = DBUtil.getConnection();
 			getAllCatagory = conn.prepareStatement("select * from bookcatagory");
 			getBooksById = conn.prepareStatement("select * from books where cid = ?");
+			getBookById = conn.prepareStatement("select * from books where id = ?");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -53,6 +55,20 @@ public class BookDaoImpl implements BookDao {
 			}
 			if (blist.size() > 0)
 				return blist;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	@Override
+	public Book getBooById(int id) {
+		try {
+			getBookById.setInt(1, id);
+			ResultSet rs = getBookById.executeQuery();
+			if(rs.next()) {
+				return (new Book(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getDouble(4), rs.getString(5), rs.getInt(6)));
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
