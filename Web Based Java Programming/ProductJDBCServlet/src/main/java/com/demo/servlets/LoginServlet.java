@@ -2,11 +2,8 @@ package com.demo.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Iterator;
-import java.util.List;
 
 import com.demo.beans.MyUser;
-import com.demo.beans.Product;
 import com.demo.dao.LoginDao;
 import com.demo.dao.LoginDaoImpl;
 
@@ -14,7 +11,6 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@SuppressWarnings("serial")
 public class LoginServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -38,5 +34,5 @@ public class LoginServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		doGet(request, response);
 	}
-}
 	
+}
