@@ -12,7 +12,7 @@ public class DBUtil {
 		
 		try {
 			DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
-			String url = "jdbc:mysql://localhost:3306/javajdbc";
+			String url = "jdbc:mysql://localhost:3306/javajdbc?useSSL=false";
 			conn = DriverManager.getConnection(url, "root", "root");
 		} catch (SQLException e) {
 			e.printStackTrace();

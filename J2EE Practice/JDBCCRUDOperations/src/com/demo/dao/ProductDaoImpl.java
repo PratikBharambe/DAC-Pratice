@@ -1,6 +1,7 @@
 package com.demo.dao;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,11 +15,15 @@ public class ProductDaoImpl implements ProductDao {
 	private static Connection connection;
 	
 	private static PreparedStatement selectStatement;
+	private static PreparedStatement insertStatement;
+	private static PreparedStatement updateStatement;
 	
 	static {
 		connection = DBUtil.getConnection();
 		try {
 			selectStatement = connection.prepareStatement("select * from product");
+			insertStatement = connection.prepareStatement("insert into product values(?, ?, ?, ?, ?, ?)");
+			updateStatement = connection.prepareStatement("update product set qty = ?, price = ? where id = ?");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -44,6 +49,39 @@ public class ProductDaoImpl implements ProductDao {
 	@Override
 	public void closeConnection() {
 		DBUtil.clpseConnection();
+	}
+
+	@Override
+	public boolean addNewProduct(Product p) {
+		try {
+			insertStatement.setInt(1, p.getId());
+			insertStatement.setString(2, p.getName());
+			insertStatement.setInt(3, p.getQty());
+			insertStatement.setDouble(4, p.getPrice());
+			insertStatement.setDate(5,  Date.valueOf(p.getExpDate()));
+			insertStatement.setInt(6, p.getCid());
+			int result = insertStatement.executeUpdate();
+			if(result > 0)
+				return true;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+	@Override
+	public boolean updateProduct(int id, int qty, double price) {
+		try {
+			updateStatement.setInt(1, qty);
+			updateStatement.setDouble(2, price);
+			updateStatement.setInt(3, id);
+			int result = updateStatement.executeUpdate();
+			if(result > 0)
+				return true;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return false;
 	}
 
 

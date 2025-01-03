@@ -10,4 +10,8 @@ public interface ProductService {
 
 	void closeConnection();
 
+	boolean addNewProduct(Product p);
+
+	boolean updateProduct(int id, int qty, double price);
+
 }

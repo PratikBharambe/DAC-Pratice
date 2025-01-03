@@ -24,4 +24,14 @@ public class ProductServiceImpl implements ProductService {
 		productDao.closeConnection();
 	}
 
+	@Override
+	public boolean addNewProduct(Product p) {
+		return productDao.addNewProduct(p);
+	}
+
+	@Override
+	public boolean updateProduct(int id, int qty, double price) {
+		return productDao.updateProduct(id, qty, price);
+	}
+
 }
