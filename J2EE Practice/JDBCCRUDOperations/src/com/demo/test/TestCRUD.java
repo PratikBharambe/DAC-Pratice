@@ -75,7 +75,13 @@ public class TestCRUD {
 			}
 
 			case 4 -> {
-
+				System.out.print("Enter product id : ");
+				int id = sc.nextInt();
+				boolean status = productService.deleteProduct(id);
+				if(status)
+					System.out.println("Product deleted successfully.");
+				else
+					System.out.println("Error in product deletion.");
 			}
 
 			case 5 -> {
@@ -85,7 +91,7 @@ public class TestCRUD {
 			}
 
 			default -> {
-
+				System.out.println("invalid choice ...........");
 			}
 
 			}

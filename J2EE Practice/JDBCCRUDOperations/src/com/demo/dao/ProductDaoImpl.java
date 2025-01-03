@@ -17,6 +17,7 @@ public class ProductDaoImpl implements ProductDao {
 	private static PreparedStatement selectStatement;
 	private static PreparedStatement insertStatement;
 	private static PreparedStatement updateStatement;
+	private static PreparedStatement deleteStatement;
 	
 	static {
 		connection = DBUtil.getConnection();
@@ -24,6 +25,7 @@ public class ProductDaoImpl implements ProductDao {
 			selectStatement = connection.prepareStatement("select * from product");
 			insertStatement = connection.prepareStatement("insert into product values(?, ?, ?, ?, ?, ?)");
 			updateStatement = connection.prepareStatement("update product set qty = ?, price = ? where id = ?");
+			updateStatement = connection.prepareStatement("delete from product where id = ?");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -71,11 +73,26 @@ public class ProductDaoImpl implements ProductDao {
 
 	@Override
 	public boolean updateProduct(int id, int qty, double price) {
+	    try {
+	        updateStatement.setInt(1, qty);
+	        updateStatement.setDouble(2, price);
+	        updateStatement.setInt(3, id);
+	        int result = updateStatement.executeUpdate();
+	        if (result > 0) {
+	            return true;
+	        }
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+	    return false;
+	}
+
+
+	@Override
+	public boolean deleteProduct(int id) {
 		try {
-			updateStatement.setInt(1, qty);
-			updateStatement.setDouble(2, price);
-			updateStatement.setInt(3, id);
-			int result = updateStatement.executeUpdate();
+			deleteStatement.setInt(1, id);
+			int result = deleteStatement.executeUpdate();
 			if(result > 0)
 				return true;
 		} catch (SQLException e) {
@@ -86,16 +103,3 @@ public class ProductDaoImpl implements ProductDao {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
