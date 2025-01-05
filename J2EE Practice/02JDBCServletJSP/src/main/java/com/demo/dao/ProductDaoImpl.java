@@ -15,12 +15,14 @@ public class ProductDaoImpl implements ProductDao {
 	private static Connection conn;
 	private static PreparedStatement getAllCatagories;
 	private static PreparedStatement getProductByCatagory;
+	private static PreparedStatement getProductById;
 
 	static {
 		conn = DbUtil.getConnection();
 		try {
 			getAllCatagories = conn.prepareStatement("select * from catagory");
 			getProductByCatagory = conn.prepareStatement("select * from product where cid = ?");
+			getProductById = conn.prepareStatement("select * from product where id = ?");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -54,6 +56,20 @@ public class ProductDaoImpl implements ProductDao {
 			}
 			if (plist.size() > 0)
 				return plist;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	@Override
+	public Product getProductById(int id) {
+		try {
+			getProductById.setInt(1, id);
+			ResultSet rs = getProductById.executeQuery();
+			if(rs.next())
+				return (new Product(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getDouble(4),
+						rs.getDate(5).toLocalDate(), rs.getInt(6)));
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

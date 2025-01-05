@@ -11,4 +11,6 @@ public interface ProductDao {
 
 	List<Product> getProductByCatagory(int cid);
 
+	Product getProductById(int id);
+
 }

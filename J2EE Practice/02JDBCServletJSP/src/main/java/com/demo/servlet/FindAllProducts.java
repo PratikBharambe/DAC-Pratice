@@ -14,9 +14,7 @@ import com.demo.beans.Product;
 import com.demo.service.ProductService;
 import com.demo.service.ProductServiceImpl;
 
-/**
- * Servlet implementation class FindAllProducts
- */
+
 @WebServlet("/getproducts")
 public class FindAllProducts extends HttpServlet {
 	
@@ -38,6 +36,7 @@ public class FindAllProducts extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("catagories");
 			rd.include(request, response);
 		}
+		
 	}
 	
 }

@@ -22,35 +22,38 @@
 		</div>
 	</div>
 	<div>
-		<table class="table">
-			<thead>
-				<tr>
-					<th></th>
-					<th>Name</th>
-					<th>Quantity</th>
-					<th>Price</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach var="p" items="${plist}">
+		<form action="addorshowcart" method="post">
+			<table class="table">
+				<thead>
 					<tr>
-						<td><input type="checkbox" name="prod" value="${p.id}"
-							id="${p.id}"></td>
-						<td>${p.name}</td>
-						<td>${p.qty}</td>
-						<td>${p.price}</td>
+						<th></th>
+						<th>Name</th>
+						<th>Quantity</th>
+						<th>Price</th>
 					</tr>
-				</c:forEach>
-				<tr>
-					<td colspan="2"><button type="submit" name="btn" id="add"
-							value="add" class="btn btn-outline-success">Add to Cart</button></td>
-					<td colspan="2">
-						<button type="submit" name="btn" id="show" value="show" class="btn btn-outline-primary">Show
-							Cart</button>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+				</thead>
+				<tbody>
+					<c:forEach var="p" items="${plist}">
+						<tr>
+							<td><input type="checkbox" name="prod" value="${p.id}"
+								id="${p.id}"></td>
+							<td>${p.name}</td>
+							<td>${p.price}</td>
+							<td><input type="number" name="p${p.id}" id="${p.id}"
+								placeholder="Enter product quantity" class="form-control"></td>
+						</tr>
+					</c:forEach>
+					<tr>
+						<td colspan="2"><button type="submit" name="btn" id="add"
+								value="add" class="btn btn-outline-success">Add to Cart</button></td>
+						<td colspan="2">
+							<button type="submit" name="btn" id="show" value="show"
+								class="btn btn-outline-primary">Show Cart</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
 	</div>
 
 	<script

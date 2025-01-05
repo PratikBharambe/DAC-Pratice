@@ -11,4 +11,6 @@ public interface ProductService {
 
 	List<Product> getProductByCatagory(int cid);
 
+	Product getProductById(int int1);
+
 }
