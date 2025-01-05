@@ -8,7 +8,7 @@
 </head>
 <body>
 	<br><br><br>
-	<form action="validate" method="post">
+	<form action="validate" method="get">
 		<div>
 			Name : <input type="text" name="username">
 		</div>
