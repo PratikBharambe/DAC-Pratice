@@ -18,21 +18,21 @@ public class LoginServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-		
+
 		LoginDao loginDao = new LoginDaoImpl();
-		
+
 		MyUser user = loginDao.authenticateUser(username, password);
-		
-		if(user != null) {
+
+		if (user != null) {
 			out.println("Login Successfull.");
-		}else {
-			out.println("Login Unsuccessfull.");			
+		} else {
+			out.println("Login Unsuccessfull.");
 		}
-		
+
 	}
-	
+
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		doGet(request, response);
 	}
-	
+
 }

@@ -25,7 +25,7 @@ public class ProductDaoImpl implements ProductDao {
 			selectStatement = connection.prepareStatement("select * from product");
 			insertStatement = connection.prepareStatement("insert into product values(?, ?, ?, ?, ?, ?)");
 			updateStatement = connection.prepareStatement("update product set qty = ?, price = ? where id = ?");
-			updateStatement = connection.prepareStatement("delete from product where id = ?");
+			deleteStatement = connection.prepareStatement("delete from product where id = ?");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
