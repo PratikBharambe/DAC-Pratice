@@ -28,5 +28,13 @@
 		<url-pattern>/validate</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>addition</servlet-name>
+		<servlet-class>com.demo.servlet.AdditionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addition</servlet-name>
+		<url-pattern>/addition</url-pattern>
+	</servlet-mapping>
 
 </web-app>

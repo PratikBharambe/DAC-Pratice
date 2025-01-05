@@ -7,9 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="helloworld">First servlet mapping</a>
+	<h1>
+		<a href="helloworld">First servlet mapping</a>
+	</h1>
 	<h1>
 		<a href="login.jsp">Login page</a>
+	</h1>
+	<h1>
+		<a href="addition.jsp">Addition page</a>
 	</h1>
 </body>
 </html>
