@@ -1,7 +1,9 @@
 package com.demo.test;
 
+import java.util.List;
 import java.util.Scanner;
 
+import com.demo.beans.Product;
 import com.demo.service.ProductService;
 import com.demo.service.ProductServiceImpl;
 
@@ -34,15 +36,24 @@ public class TestHibernate {
 			}
 			
 			case 2 -> {
-				
+				List<Product> plist = productService.getAllProduct();
+				plist.forEach(System.out::println);
 			}
 			
 			case 3 -> {
-				
+				boolean result = productService.updateProduct();
+				if(result)
+					System.out.println("Product updated.");
+				else
+					System.out.println("Error in product updation.");
 			}
 			
 			case 4 -> {
-				
+				boolean result = productService.deleteProduct();
+				if(result)
+					System.out.println("Product deleted.");
+				else
+					System.out.println("Error in product deletion.");
 			}
 			
 			case 5 -> {
