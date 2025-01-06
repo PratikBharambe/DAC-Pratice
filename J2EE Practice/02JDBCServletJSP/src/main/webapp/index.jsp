@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Product Management System</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -13,14 +13,14 @@
 </head>
 <body class="m-3 p-4">
 	<h1>
-		<a href="helloworld" class="btn btn-outline-primary">First servlet
+		<a href="helloworld" class="btn btn-primary">First servlet
 			mapping</a>
 	</h1>
 	<h1>
-		<a href="login.jsp" class="btn btn-outline-primary">Login page</a>
+		<a href="login.jsp" class="btn btn-primary">Login page</a>
 	</h1>
 	<h1>
-		<a href="addition.jsp" class="btn btn-outline-primary">Addition
+		<a href="addition.jsp" class="btn btn-primary">Addition
 			page</a>
 	</h1>
 	<script

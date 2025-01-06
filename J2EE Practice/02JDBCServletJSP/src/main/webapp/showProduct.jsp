@@ -40,7 +40,7 @@
 							<td>${p.name}</td>
 							<td>${p.price}</td>
 							<td><input type="number" name="p${p.id}" id="${p.id}"
-								placeholder="Enter product quantity" class="form-control"></td>
+								placeholder="Enter product quantity" class="form-control w-50"></td>
 						</tr>
 					</c:forEach>
 					<tr>

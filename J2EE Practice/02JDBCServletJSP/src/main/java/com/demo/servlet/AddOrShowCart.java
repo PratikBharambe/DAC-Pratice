@@ -41,7 +41,7 @@ public class AddOrShowCart extends HttpServlet {
 				for (String id : prodArr) {
 					Product product = productService.getProductById(Integer.parseInt(id));
 					int orderQty = Integer.parseInt(request.getParameter("p" + id));
-					cart.add(new CartItem(product.getId(), product.getName(), orderQty));
+					cart.add(new CartItem(product.getId(), product.getName(), orderQty, product.getPrice()));
 				}
 	
 				session.setAttribute("cart", cart);

@@ -1,5 +1,6 @@
 package com.demo.servlet;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -29,9 +30,12 @@ public class LoginServlet extends HttpServlet {
 		User user = loginService.authenticateUser(username, password);
 
 		if (user.getRole().equals("user")) {
-			out.println("<h1>Login Successfull !!!!</h1>");
+			RequestDispatcher rd = request.getRequestDispatcher("catagories");
+			rd.forward(request, response);
 		} else {
-			out.println("<h1>Login failed !!!!</h1>");
+			out.println("<h1>Login failed !!!!<br>Try again ..........</h1>");
+			RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+			rd.include(request, response);
 		}
 
 //		if(username.equals("admin") && password.equals("admin"))
