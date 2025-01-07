@@ -43,4 +43,3 @@ select empno, ename, sal, if(sal = 1750, "Found", "Not Found") as st from emp;
 
 -- sub-query
 select empno, ename, sal from (select empno, ename, sal, if(sal = 1750, "Found", "Not Found") as st from emp) as es where es.st = "Found";
-
