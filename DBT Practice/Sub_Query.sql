@@ -67,7 +67,8 @@ select year(hiredate), count(empno) from emp where year(hiredate) = (select hd f
 -- 25.	Display the details of all employees who report to BLAKE
 select * from emp where mgr = (select empno from emp where ename = "blake");
 
+-- 26.	Display the department no of all departments having more than 1 clerks
+select deptno, count(empno) as count_of_clerk from emp where job = "clerk" group by deptno;
 
-
-
-
+-- 28.	Display all employee names and the locations of their departments except ‘CHICAGO’
+select empno, ename, sal, job, deptno, hiredate from emp where deptno = (select deptno from dept where loc = "chicago");
