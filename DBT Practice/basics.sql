@@ -37,6 +37,7 @@ select now() as Today_Date;
 -- distinct keyword
 select sal from emp;
 select distinct sal from emp;
+select distinct ename from emp;
 
 -- if function
 select empno, ename, sal, if(sal = 1750, "Found", "Not Found") as st from emp;

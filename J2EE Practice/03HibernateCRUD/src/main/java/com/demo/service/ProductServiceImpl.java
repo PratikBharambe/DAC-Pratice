@@ -9,13 +9,13 @@ import com.demo.dao.ProductDaoImpl;
 
 public class ProductServiceImpl implements ProductService {
 
-    private ProductDao productDao;
+    private final ProductDao productDao;
     
     public ProductServiceImpl() {
 		productDao = new ProductDaoImpl();
 	}
     
-    private static Scanner sc = new Scanner(System.in);
+    private static final Scanner sc = new Scanner(System.in);
 
 	@Override
 	public boolean addNewProduct() {
