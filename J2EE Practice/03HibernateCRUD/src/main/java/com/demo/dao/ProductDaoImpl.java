@@ -11,7 +11,7 @@ import jakarta.persistence.Query;
 
 public class ProductDaoImpl implements ProductDao {
 
-	private static SessionFactory sf;
+	private static final SessionFactory sf;
 
 	static {
 		sf = HibernateUtil.getConnection();
@@ -19,7 +19,8 @@ public class ProductDaoImpl implements ProductDao {
 
 	@Override
 	public boolean saveProduct(Product product) {
-		Session sess = sf.openSession();
+        assert sf != null;
+        Session sess = sf.openSession();
 		Transaction tr = sess.beginTransaction();
 		sess.persist(product);
 		tr.commit();
@@ -29,7 +30,8 @@ public class ProductDaoImpl implements ProductDao {
 
 	@Override
 	public List<Product> getAllProduct() {
-		Session sess = sf.openSession();
+        assert sf != null;
+        Session sess = sf.openSession();
 		Transaction tr = sess.beginTransaction();
 		Query query = sess.createQuery("from Product", Product.class);
 		List<Product> plist = query.getResultList();
@@ -40,7 +42,8 @@ public class ProductDaoImpl implements ProductDao {
 
 	@Override
 	public boolean updateProduct(Product product) {
-		Session sess = sf.openSession();
+        assert sf != null;
+        Session sess = sf.openSession();
 		Transaction tr = sess.beginTransaction();
 		Product p = sess.get(Product.class, product.getId());
 		p.setName(product.getName());
@@ -53,7 +56,8 @@ public class ProductDaoImpl implements ProductDao {
 
 	@Override
 	public boolean deleteProduct(int id) {
-		Session session = sf.openSession();
+        assert sf != null;
+        Session session = sf.openSession();
 		Transaction tr = session.beginTransaction();
 		Product p = session.get(Product.class, id);
 		session.remove(p);
